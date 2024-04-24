@@ -162,11 +162,11 @@ Write a Python program to remove the nth index character from a nonempty string
 """
 
 
-def remove_char(string: str, n: int):
+def remove_char(string: str, n: int) -> str:
     """
     :param string:
     :param n:
-    :return:
+    :return string:
     """
     if string.strip() == '':
         raise ValueError('Empty string is not allowed!')
@@ -183,7 +183,7 @@ for tech in web_techs:
 """
 
 
-def exchange_chars(string: str):
+def exchange_chars(string: str) -> str:
     """
     :param string:
     :return string:
@@ -201,11 +201,11 @@ Write a Python program to count the occurrences of each word in a given sentence
 def count_occurrence(sentence: str) -> dict:
     """
     :param sentence:
-    :return:
+    :return dict:
     """
     dico = {}
     keys = dico.keys()
-    words = [word.strip().lower() for word in sentence.split(" ")]
+    words = [word.strip().lower().replace('.', '') for word in sentence.strip().split(" ")]
     for word in words:
         if word in keys:
             dico[word] += 1
@@ -222,5 +222,81 @@ remaining essentially unchanged. It was popularised in the 1960s with the releas
 Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
 Ipsum.
 """
+new_sentence = ''
+for line in sentence.split('\n'):
+    new_sentence += line + ' '
+print(count_occurrence(new_sentence))
 
-print(count_occurrence(sentence))
+"""
+Write a Python program to remove characters that have odd index values in a given string
+"""
+
+
+def remove_chars_with_odd_index(string: str) -> str:
+    """
+    :param string:
+    :return string:
+    """
+    new_word = ''
+    
+    for i in range(len(string)):
+        if i % 2 == 0:
+            new_word += string[i]
+    
+    return new_word
+
+
+text = 'Hello world'
+print(f"{remove_chars_with_odd_index(text)}")
+
+"""
+Write a Python program that accepts a comma-separated sequence of words as input and prints the distinct words in
+sorted form (alphanumerically).
+"""
+
+
+def distinct_words(string: str) -> str:
+    """
+    :param string:
+    :return str:
+    """
+    if len(string) == 0:
+        raise ValueError('parameter is empty')
+    words = [word.strip() for word in string.split(',')]
+    return ','.join(sorted(list(set(words))))
+
+
+sequence = 'red, white, black, red, green, black'
+print(distinct_words(sequence))
+
+"""
+Write a Python function to create an HTML string with tags around the word(s).
+"""
+
+
+def add_tags(tag: str, content: str) -> str:
+    """
+    :param tag:
+    :param content:
+    :return str:
+    """
+    
+    return f"<{tag}>{content}</{tag}>"
+
+
+print(add_tags('i', 'bonjour'))
+
+"""
+Write a Python function to reverse a string if its length is a multiple of 4
+"""
+
+
+def reverse_str(string: str) -> str:
+    """
+    :param string:
+    :return string:
+    """
+    new_string = string
+    if len(string) % 4 == 0:
+        new_string = new_string[::-1]
+    return new_string
