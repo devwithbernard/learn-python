@@ -16,11 +16,11 @@ List indexing : ['a', 'b', 'c', 'd']
 """
 
 products = ['Shoe', 'Trowser', 'Bag', 'Watch']
-for idx in range(len(products)): # Positive indexation
+for idx in range(len(products)):  # Positive indexation
     product = products[idx]
     print(f"Product N°{idx + 1} --> {product}")
 
-for idx in range(1, len(products) + 1): # Negative indexation
+for idx in range(1, len(products) + 1):  # Negative indexation
     product = products[-idx]
     print(f"Product N°{len(products) + 1 - idx} --> {product}")
 
@@ -28,12 +28,39 @@ for idx in range(1, len(products) + 1): # Negative indexation
 Lists are mutable
 """
 import time
+
 numbers = []
 
-for i in range(11):
-    time.sleep(1)
-    result = i * 3
-    numbers.append(result)
-    print(f"{result} has been added.")
+# for i in range(11):
+#     time.sleep(1)
+#     result = i * 3
+#     numbers.append(result)
+#     print(f"{result} has been added.")
 
 print("Numbers[] = ", numbers)
+
+from typing import List
+
+
+def prepend(value: int, nums: List[int]) -> List[int]:
+    """
+
+    :param value:
+    :param nums:
+    :return:
+    """
+    return [value] + nums
+
+
+print(prepend(1, nums=[0, 3]))
+
+"""
+Shallow Copy
+"""
+nums = [1, 3, 4]
+nums_copy = nums[:]
+nums.pop()
+print(f"""
+    nums = {nums}
+    nums_copy = {nums_copy}
+""")
