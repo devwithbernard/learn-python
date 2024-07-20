@@ -24,3 +24,16 @@ for idx in range(1, len(products) + 1): # Negative indexation
     product = products[-idx]
     print(f"Product N°{len(products) + 1 - idx} --> {product}")
 
+"""
+Lists are mutable
+"""
+import time
+numbers = []
+
+for i in range(11):
+    time.sleep(1)
+    result = i * 3
+    numbers.append(result)
+    print(f"{result} has been added.")
+
+print("Numbers[] = ", numbers)
