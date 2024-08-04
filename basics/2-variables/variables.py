@@ -35,3 +35,17 @@ if __name__ == '__main__':
     del full_name
     print(full_name)  # Raise a NameError exception with the message 'name full_name is not defined
 
+    # Casting types
+
+    # Int to Float
+    minutes_int: int = 20
+    minutes_float: float = float(minutes_int)
+
+    if isinstance(minutes_float, float):
+        print("Casting from int to float works!")
+
+    # Int, Float to str
+    minutes_str: str = str(minutes_int)
+    minutes_int_2 = int('30')
+    if isinstance(minutes_str, str) and isinstance(minutes_int_2, int):
+        print("Casting from int to str works in both ways")
