@@ -11,3 +11,19 @@ if __name__ == '__main__':
 
     print({'memory address': memory_address, 'variable': mango_quantity})
     print({'memory address': today_date_memory_address, 'variable': today_date})
+
+    # Print variables and their types
+
+    counter: int = 10
+    distance: float = 100.0
+    driver_name: str = 'Usain Bolt'
+
+    print(f'counter => {counter} hours, distance => {distance} km , driver => {driver_name}')
+
+    variables_definition: list[dict] = [
+        {'variable': counter, 'type': type(counter)},
+        {'variable': distance, 'type': type(distance)},
+        {'variable': driver_name, 'type': type(driver_name)},
+    ]
+
+    print(variables_definition)
