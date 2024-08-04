@@ -49,3 +49,13 @@ if __name__ == '__main__':
     minutes_int_2 = int('30')
     if isinstance(minutes_str, str) and isinstance(minutes_int_2, int):
         print("Casting from int to str works in both ways")
+
+    # Variable use case
+    height: float = 10.5
+    width: float = 15.5
+
+    area: float = width * height
+    perimeter: float = 2 * (width + height)
+
+    print(f"The area of square is {area}m^2")
+    print(f"The perimeter of square is {perimeter}m")
