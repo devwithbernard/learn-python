@@ -59,3 +59,16 @@ if __name__ == '__main__':
 
     print(f"The area of square is {area}m^2")
     print(f"The perimeter of square is {perimeter}m")
+
+    # Local Variable vs Global Variable
+
+    name = 'Jack'
+
+
+    def upper_name() -> str:
+        global name
+        uppercase_name = name.upper()
+        return uppercase_name
+
+    print('From function upper_name ', upper_name(), sep='=>')
+    print('Global variable after modification in upper_name: ', name)
