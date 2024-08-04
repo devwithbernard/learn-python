@@ -27,3 +27,11 @@ if __name__ == '__main__':
     ]
 
     print(variables_definition)
+
+    # Deleting variables
+    full_name: str = 'John Cena'
+    print(f"The famous athlete name is {full_name}")
+
+    del full_name
+    print(full_name)  # Raise a NameError exception with the message 'name full_name is not defined
+
