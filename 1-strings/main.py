@@ -24,6 +24,20 @@ def split_text(text: str, separator=' ') -> list[str]:
     return strings
 
 
+def slice_text(text: str, start: int, end: int) -> str | None:
+    """
+    Slice a string from start to end
+    :param text: entry text
+    :param start: start index
+    :param end: end index
+    :return: string which is the slicing string of original text
+    """
+
+    if start >= end:
+        return None
+    return text[start:end]
+
+
 def main() -> None:
     """
         Entry point
@@ -52,6 +66,21 @@ def main() -> None:
     """)
 
     print(split_text("Hello world. I love programming"))
+
+    # Slicing a string
+    print(slice_text(my_message, 1, 4))
+
+    # string methods
+    upper_text: str = my_message.upper()
+    lower_text: str = my_message.lower()
+
+    print(f"""
+    {my_message} upper to => {upper_text}
+    {my_message} lower to => {lower_text}
+    """)
+
+    encoding_message = my_message.replace('o','\\')
+    print(f"Encoding messsage => {encoding_message}")
 
 
 if __name__ == '__main__':
