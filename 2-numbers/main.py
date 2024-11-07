@@ -28,6 +28,16 @@ def minus(x: int, y: int) -> int:
     return x - y
 
 
+def multiply(x: float, y: float) -> float:
+    """
+    Multiply two numbers
+    :param x: first number
+    :param y: second number
+    :return: multiplication of two numbers
+    """
+    return x * y
+
+
 def main() -> None:
     # Calculate sum
     numbers: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -35,6 +45,11 @@ def main() -> None:
 
     # Calculate minus
     print(minus(5, 9))
+
+    # Multiply two number
+    x: int = 7
+    y: int = 9
+    print(f" {x} x {y} = {multiply(x, y)}")
 
 
 if __name__ == '__main__':
