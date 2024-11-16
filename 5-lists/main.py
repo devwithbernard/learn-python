@@ -29,6 +29,10 @@ def main() -> None:
     number_of_items: int = len(fruits)
     print(f"They are {number_of_items} fruits in list")
 
+    # Type of list
+    if isinstance(fruits, list):
+        print("List of fruits is an instance of list datatype")
+
 
 if __name__ == '__main__':
     main()
