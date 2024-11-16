@@ -25,6 +25,10 @@ def main() -> None:
     fruits[1] = "Pineapple"
     print("After changing item: ", fruits)
 
+    # Length of List
+    number_of_items: int = len(fruits)
+    print(f"They are {number_of_items} fruits in list")
+
 
 if __name__ == '__main__':
     main()
