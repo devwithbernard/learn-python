@@ -1,6 +1,5 @@
 def main() -> None:
     # Create a list
-
     fruits: list[str] = ["Apple", "Banana", "Cherry"]
     print(list, "Type: ", type(fruits))
 
@@ -15,6 +14,16 @@ def main() -> None:
     Last item => {last_item}
     """)
 
+    # List is changeable
+    mango: str = 'Mango'
+    fruits.append(mango)
+    print("After appending item: ", fruits)
+
+    fruits.remove("Banana")
+    print("After removing item: ", fruits)
+
+    fruits[1] = "Pineapple"
+    print("After changing item: ", fruits)
 
 
 if __name__ == '__main__':
