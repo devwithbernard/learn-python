@@ -39,8 +39,16 @@ def main() -> None:
 
         print(f"Range of indexes: {range_of_iterable}")
 
+    def is_item_exists(iterable: list[str], item: str) -> None:
+        mapped_iterable: list[str] = list(map(lambda x: x.lower().strip(), iterable))
+        if item.lower() in mapped_iterable:
+            print(f"{item} is in {iterable}")
+        else:
+            print(f"{item} isn't in {iterable}")
+
     negative_indexing(fruits)
     range_of_indexes(fruits, 10, 2)
+    is_item_exists(fruits, "Mango")
 
 
 if __name__ == '__main__':
