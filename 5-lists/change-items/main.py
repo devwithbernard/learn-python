@@ -2,7 +2,7 @@
 Change List Items
 """
 from copy import copy
-from typing import Sequence, Any
+from typing import Sequence, List, Any
 
 
 def main() -> None:
@@ -43,8 +43,23 @@ def main() -> None:
             print("Error of indexes")
             raise IndexError("Started Index or Ended index must be ordered!")
 
+    def insert_items(iterable: Sequence | List, insert_index: int, item: Any) -> None:
+        """
+        Insert items in an iterable
+        :param iterable: an iterable
+        :param insert_index: index of item that will be inserted
+        :param item: item that will be inserted
+        """
+        duplicated_iterable: Sequence | List = copy(iterable)
+        duplicated_iterable.insert(insert_index, item)
+        print(f"""
+                Last Sequence => {iterable}
+                New Sequence => {duplicated_iterable}
+        """)
+
     change_item_value(fruits, 'Mango', 'Cherry')
     change_range_of_item_values(fruits, 1, 3, ['Melon', 'Orange'])
+    insert_items(fruits, 2, "Pineapple")
 
 
 if __name__ == '__main__':
