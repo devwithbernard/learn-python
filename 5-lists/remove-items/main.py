@@ -16,11 +16,20 @@ class RemoveItems:
         self.entry_sequences.remove(item)
         return item
 
+    def remove_item_at_specified_index(self, index: Any) -> Any:
+        if index not in range(-len(self.entry_sequences), len(self.entry_sequences)):
+            raise IndexError("Specified index is out of range")
+        removed_item: Any = self.entry_sequences.pop(index)
+        return removed_item
+
 
 def main() -> None:
-    fruits: List = ["Banana", "Cherry"]
+    fruits: List = ["Banana", "Cherry", "Apple", "Orange", "Pineapple"]
     RI: RemoveItems = RemoveItems(fruits)
     RI.remove_specified_item("Banana")
+    print(f"New list: ", RI.entry_sequences)
+
+    RI.remove_item_at_specified_index(-1)
     print(f"New list: ", RI.entry_sequences)
 
 
