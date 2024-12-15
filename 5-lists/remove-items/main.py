@@ -22,6 +22,9 @@ class RemoveItems:
         removed_item: Any = self.entry_sequences.pop(index)
         return removed_item
 
+    def clear_list(self) -> None:
+        self.entry_sequences.clear()
+
 
 def main() -> None:
     fruits: List = ["Banana", "Cherry", "Apple", "Orange", "Pineapple"]
@@ -30,6 +33,9 @@ def main() -> None:
     print(f"New list: ", RI.entry_sequences)
 
     RI.remove_item_at_specified_index(-1)
+    print(f"New list: ", RI.entry_sequences)
+
+    RI.clear_list()
     print(f"New list: ", RI.entry_sequences)
 
 
