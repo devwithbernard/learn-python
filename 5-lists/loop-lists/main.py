@@ -41,10 +41,16 @@ def loop_through_index_numbers(sequence: List[dict]) -> None:
             print("-" * 50)
 
 
+def loop_using_list_comprehension(sequence: List[dict]) -> List:
+    new_sequence: List = [item['title'] for item in sequence if item['id'] < 10]
+    return new_sequence
+
+
 def main() -> None:
     todos: List[dict] = get_todos("https://jsonplaceholder.typicode.com/todos")
-    # loop_through_list(todos)
+    loop_through_list(todos)
     loop_through_index_numbers(todos)
+    print(loop_using_list_comprehension(todos))
 
 
 if __name__ == '__main__':
