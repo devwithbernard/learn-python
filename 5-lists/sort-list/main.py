@@ -29,6 +29,15 @@ def main() -> None:
 
     print(descending_sort([200, 50, 25, 82, 23]))
 
+    def custom_sort(sequence: List[Any], key) -> List[Any]:
+        copy_sequence: List[Any] = sequence[:]
+        copy_sequence.sort(key=key, reverse=False)
+        return copy_sequence
+
+    print(custom_sort([200, 500, 65, 42, 230], key=lambda number: number - 50))
+    print(custom_sort(fruits, key=lambda word: len(word)))
+    print(custom_sort([100, -400, -22, 17, 234_000], key=abs))
+
 
 if __name__ == '__main__':
     main()
