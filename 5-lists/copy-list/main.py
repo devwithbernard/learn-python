@@ -21,6 +21,12 @@ def main() -> None:
 
     print(f"""copy_fruits with slice operator = {use_slice_operator(fruits)}""")
 
+    def use_list_method(sequence: List[Any]) -> List[Any]:
+        list_sequence: List[Any] = list(sequence)
+        return list_sequence
+
+    print(f"""copy_fruits with list() method = {use_list_method(fruits)}""")
+
 
 if __name__ == '__main__':
     main()
