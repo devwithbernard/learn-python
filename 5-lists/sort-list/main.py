@@ -22,6 +22,13 @@ def main() -> None:
 
     print(sort_by_numerically([100, 50, 65, 82, 23]))
 
+    def descending_sort(sequence: List[Any]) -> List[Any]:
+        copy_sequence: List[Any] = sequence[:]
+        copy_sequence.sort(reverse=True)
+        return copy_sequence
+
+    print(descending_sort([200, 50, 25, 82, 23]))
+
 
 if __name__ == '__main__':
     main()
