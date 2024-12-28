@@ -15,6 +15,13 @@ def main() -> None:
 
     print(sort_by_alphanumerically(fruits))
 
+    def sort_by_numerically(sequence: List[float]) -> List[float]:
+        copy_sequence: List[float] = sequence[:]
+        copy_sequence.sort()
+        return copy_sequence
+
+    print(sort_by_numerically([100, 50, 65, 82, 23]))
+
 
 if __name__ == '__main__':
     main()
