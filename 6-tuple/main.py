@@ -22,6 +22,16 @@ def main() -> None:
 
     print(f"""tuple items => {tuple_items(fruits)}""")
 
+    def duplicate_items(sequence: tuple[str, ...]) -> list[tuple[str, int]]:
+        counts: dict = {item: sequence.count(item) for item in set(sequence)}
+        duplicate_items: list[tuple[str, int]] = [
+            (item, count) for item, count in counts.items() if count > 1
+        ]
+        duplicate_items.sort(key=lambda x: x[0], reverse=False)
+        return duplicate_items
+
+    print(duplicate_items(fruits + ('Apple', 'Banana', 'Cherry', 'Apple')))
+
 
 if __name__ == '__main__':
     main()
