@@ -14,6 +14,14 @@ def main() -> None:
 
     print_tuple(fruits)
 
+    def tuple_items(sequence: tuple[str, ...]) -> tuple[str, ...]:
+        first_tuple, second_tuple, *rest = sequence
+        last_tuple = sequence[-1]
+
+        return first_tuple, second_tuple, last_tuple
+
+    print(f"""tuple items => {tuple_items(fruits)}""")
+
 
 if __name__ == '__main__':
     main()
