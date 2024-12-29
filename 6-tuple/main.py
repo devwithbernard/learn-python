@@ -33,11 +33,23 @@ def main() -> None:
     print(duplicate_items(fruits + ('Apple', 'Banana', 'Cherry', 'Apple')))
 
     def calculate_distance(point1: tuple, point2: tuple) -> float:
-        distance: float = ((point1[0] - point2[0]) ** 2) + ((point1[1] - point2[1]) ** 2)**0.5
+        distance: float = ((point1[0] - point2[0]) ** 2) + ((point1[1] - point2[1]) ** 2) ** 0.5
         return round(distance, 3)
 
     calculated_distance: float = calculate_distance((10, 50), (30, 8))
     print(f"""Distance calculated => {calculated_distance}""")
+
+    def length_of_tuple(sequence: tuple) -> None:
+        length: float = len(sequence)
+        if length == 0:
+            print("There are no items in tuple.")
+        elif length == 1:
+            print("There are only one item in tuple.")
+        else:
+            for index, item in enumerate(sequence):
+                print(f"""{index} => {item}""")
+
+    length_of_tuple(fruits)
 
 
 if __name__ == '__main__':
