@@ -32,6 +32,13 @@ def main() -> None:
 
     print(duplicate_items(fruits + ('Apple', 'Banana', 'Cherry', 'Apple')))
 
+    def calculate_distance(point1: tuple, point2: tuple) -> float:
+        distance: float = ((point1[0] - point2[0]) ** 2) + ((point1[1] - point2[1]) ** 2)**0.5
+        return round(distance, 3)
+
+    calculated_distance: float = calculate_distance((10, 50), (30, 8))
+    print(f"""Distance calculated => {calculated_distance}""")
+
 
 if __name__ == '__main__':
     main()
