@@ -1,6 +1,7 @@
 """
 In Python, tuples are immutable sequences commonly used for grouping data.
 """
+from typing import Any
 
 
 def main() -> None:
@@ -50,6 +51,13 @@ def main() -> None:
                 print(f"""{index} => {item}""")
 
     length_of_tuple(fruits)
+
+    def create_tuple_with_one_item(item: Any) -> tuple:
+        iterable: tuple = (item,)
+        return iterable, type(iterable)
+
+    value, datatype = create_tuple_with_one_item('Banana')
+    print(f"value: {value}, type: {datatype.__name__}")
 
 
 if __name__ == '__main__':
