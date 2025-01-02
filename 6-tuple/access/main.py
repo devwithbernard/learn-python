@@ -19,6 +19,20 @@ def main() -> None:
 
     print(access_tuple_items(fruits))
 
+    def negative_indexing(sequence: tuple[str, ...]) -> str:
+        first_item: str = sequence[-len(sequence)]
+        second_item: str = sequence[1-len(sequence)]
+        last_item: str = sequence[-1]
+
+        return f"""
+        Access items through Negative Indexing:
+        first item => {first_item}
+        second item => {second_item}
+        last item => {last_item}
+        """
+
+    print(negative_indexing(fruits))
+
 
 if __name__ == '__main__':
     main()
