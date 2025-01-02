@@ -33,6 +33,15 @@ def main() -> None:
 
     print(negative_indexing(fruits))
 
+    def check_if_item_exists(sequence: tuple[str, ...], item: str) -> bool:
+        return item in sequence
+
+    fruit: str = 'Mango'
+    if check_if_item_exists(fruits, fruit):
+        print(f"You got a {fruit} 🥭")
+    else:
+        print("😒😒")
+
 
 if __name__ == '__main__':
     main()
