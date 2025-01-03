@@ -27,6 +27,22 @@ def main() -> None:
 
     print(f"""{change_tuple_value(fruits, 'Ananas', 'Lemon')}""")
 
+    def remove_item_in_tuple(sequence: tuple[str,...], item: str) -> tuple[str, ...]:
+        """
+        Remove an item in sequence or throw an ValueError if item doesn't in sequence
+        :param sequence: A sequence of items
+        :param item: Item that must be removed
+        :return: A sequence after item has been removed
+        :raise: ValueError
+        """
+        if item in sequence:
+            list_sequence: list[str] = list(sequence)
+            list_sequence.remove(item)
+            return tuple(list_sequence)
+        raise ValueError(f"'{item}' doesn't in {sequence}")
+
+    print(remove_item_in_tuple(fruits, 'Banana'))
+
 
 if __name__ == '__main__':
     main()
