@@ -10,7 +10,8 @@ def main() -> None:
         (first_item, second_item, *rest) = sequence
         items: dict[str, str] = {
             "first item": first_item,
-            "second item": second_item
+            "second item": second_item,
+            "rest values": rest
         }
         return items
 
