@@ -20,6 +20,12 @@ def main() -> None:
         upper format => {upper_item}
         """)
 
+    def loop_using_index(sequence: tuple[str, ...]) -> None:
+        for index in range(len(sequence)):
+            print(f"({index},{sequence[index]})")
+
+    loop_using_index(fruits)
+
 
 if __name__ == '__main__':
     main()
