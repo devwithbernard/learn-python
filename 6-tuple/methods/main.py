@@ -14,7 +14,17 @@ def main() -> None:
             "count": sequence.count(item)
         }
 
-    print(count(fruits, 'Banana')) # {'item': 'Banana', 'count': 2}
+    print(count(fruits, 'Banana'))  # {'item': 'Banana', 'count': 2}
+
+    def index(sequence: tuple[Any, ...], item: Any) -> dict:
+        if item in sequence:
+            return {
+                "item": item,
+                "found_index": sequence.index(item)
+            }
+        raise Exception(f"Item not in tuple")
+
+    print(index(fruits, 'Pineapple'))
 
 
 if __name__ == '__main__':
