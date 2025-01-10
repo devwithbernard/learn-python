@@ -2,6 +2,8 @@
 Add set items
 """
 
+from typing import Iterable
+
 
 def main() -> None:
     fruits: set[str] = {"Apple", "Pineapple", "Lemon"}
@@ -23,6 +25,13 @@ def main() -> None:
         raise ValueError('args are not instances of set')
 
     updated_fruits: set[str] = update_set(fruits, other_fruits)
+    print(updated_fruits)
+
+    def add_iterable_to_set(original_set: set[str], iterable: Iterable) -> set:
+        original_set.update(iterable)
+        return original_set
+
+    updated_fruits: set[str] = add_iterable_to_set(fruits, ['Orange', 'Strawberry'])
     print(updated_fruits)
 
 
