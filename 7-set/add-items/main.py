@@ -16,6 +16,15 @@ def main() -> None:
     new_fruits: set[str] = add_items(fruits, 'Mango')
     print("New fruits: ", new_fruits)
 
+    def update_set(set1: set[str], set2: set[str]) -> set[str]:
+        if isinstance(set1, set) and isinstance(set2, set):
+            set1.update(set2)
+            return set1
+        raise ValueError('args are not instances of set')
+
+    updated_fruits: set[str] = update_set(fruits, other_fruits)
+    print(updated_fruits)
+
 
 if __name__ == '__main__':
     main()
