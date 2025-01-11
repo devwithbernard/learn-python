@@ -23,6 +23,13 @@ def main() -> None:
     new_fruits_after_discarded_item: set[str] = discard_set_item(fruits, 'Cherry')
     print(new_fruits_after_discarded_item)
 
+    def clear_set(sequence: set) -> set:
+        sequence.clear()
+        return sequence
+
+    empty_set: set = clear_set(fruits)
+    print(f"Empty fruits: ", empty_set)
+
 
 if __name__ == '__main__':
     main()
