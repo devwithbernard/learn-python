@@ -35,6 +35,20 @@ def main() -> None:
 
     print(union_multiple_sets(set1=set_fruits_1, set2=set_fruits_2, set3={'Passion fruit', 'Cranberry'}))
 
+    def intersection_sets(set_1: set[str], set_2: set[str]) -> set[str]:
+        """
+        Join two sets where the return value contains the items that are present in both parameters
+
+        :param set_1: first set
+        :param set_2: second set
+        :return: A single set containing only values present in both sets
+        """
+
+        intersection_set: set[str] = set_1.intersection(set_2)
+        return intersection_set
+
+    print(f"intersection set: {intersection_sets(set_fruits_1, set_fruits_2)}")
+
 
 if __name__ == '__main__':
     main()
