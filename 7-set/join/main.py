@@ -15,6 +15,26 @@ def main() -> None:
 
     print(union_sets(set_fruits_1, set_fruits_2))
 
+    def union_multiple_sets(**kwargs) -> set:
+        """
+        Join multiple sets provided as keyword arguments
+
+        :param kwargs: Keyword arguments where each value is a set
+        :return: A single set containing all elements from the provided
+        """
+
+        combined_set = set()
+
+        for key, value in kwargs.items():
+            if isinstance(value, set):
+                combined_set.update(value)
+            else:
+                raise ValueError(f"Value for '{key}' is not a set. All arguments must be sets.")
+
+        return combined_set
+
+    print(union_multiple_sets(set1=set_fruits_1, set2=set_fruits_2, set3={'Passion fruit', 'Cranberry'}))
+
 
 if __name__ == '__main__':
     main()
