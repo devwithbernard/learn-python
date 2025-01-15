@@ -40,6 +40,11 @@ def main() -> None:
 
     pprint(get_user(2))
 
+    def number_of_items(data: dict) -> tuple:
+        return 'Dict', f"Items: {len(data)}", f"type: {type(data).__name__}"
+
+    print(number_of_items({'brand': "Ford", 'model': "Mustang", 'year': 1964}))
+
 
 if __name__ == '__main__':
     main()
