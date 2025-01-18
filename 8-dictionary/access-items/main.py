@@ -42,6 +42,12 @@ def main() -> None:
     }
     access_dictionary_items(product)
 
+    def get_dict_keys(data: dict) -> tuple[str, ...]:
+        return tuple(data.keys())
+
+    for key in get_dict_keys(product):
+        print(f"{key}: {product[key]}")
+
 
 if __name__ == '__main__':
     main()
