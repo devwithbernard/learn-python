@@ -48,6 +48,13 @@ def main() -> None:
     for key in get_dict_keys(product):
         print(f"{key}: {product[key]}")
 
+    def get_dict_values(data: dict):
+        return data.values()
+
+    print("Product infos:")
+    for value in get_dict_values(product):
+        print(f"\t{value}")
+
 
 if __name__ == '__main__':
     main()
