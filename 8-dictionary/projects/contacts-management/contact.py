@@ -17,31 +17,16 @@ def add_contact(contacts: dict) -> dict | None:
     return None
 
 
-def search_contact(contacts: dict) -> bool:
+def search_contact(contacts: dict) -> dict | bool:
     name: str = input("Contact name: ")
 
-    if name in contacts:
-        print(f"Infos about {name}: ")
-        for key, value in contacts.get("name"):
-            print(f"{key}: {value}")
-        return True
-    else:
-        print("Contact not found")
+    for contact_name in contacts.keys():
+        if name.lower() in contact_name.lower():
+            name = contact_name
+            contact: dict = contacts.get(name)
+            return Contact(name, contact['telephone'], contact['email'], contact['address']).format_contact()
 
     return False
-
-
-def delete_contact(contacts: dict) -> dict | None:
-    name: str = input("Enter your name: ")
-    copy_contacts: dict = contacts.copy()
-
-    if search_contact(copy_contacts):
-        copy_contacts.pop(name)
-        return copy_contacts
-    else:
-        print(f"Can delete contact")
-
-    return None
 
 
 class Contact:
