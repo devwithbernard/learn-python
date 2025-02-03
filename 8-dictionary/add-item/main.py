@@ -17,6 +17,19 @@ def add_item(data: Dict, key: str, value: Any) -> Dict:
     raise ValueError(f"{key}:'{value}' is not valid to store in {data}.")
 
 
+def update_data(data: Dict, item: dict[str, Any]) -> Dict:
+    """
+    Update a dictionary with {key: value} pair
+    :param data: dictionary that will be updated
+    :param item: dictionary to add to data
+    :return: dictionary after updated data
+    """
+
+    copy_data: Dict = data.copy()
+    copy_data.update(item)
+    return copy_data
+
+
 def main() -> None:
     data: Dict = {
         'brand': 'Mustang',
@@ -28,6 +41,10 @@ def main() -> None:
         print("Car: ", car)
     except ValueError as v_error:
         print(v_error.__str__())
+
+    car_price: str = input("Enter car price: ")
+    new_car: Dict = update_data(data, {'price': car_price})
+    print("Updated car: ", new_car)
 
 
 if __name__ == '__main__':
