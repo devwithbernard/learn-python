@@ -34,6 +34,14 @@ def main() -> None:
 
     loop_through_values(person)
 
+    def loop_through_items(data: dict) -> None:
+        if data:
+            print("Person")
+            for key, value in data.items():
+                print(f"\t{key.capitalize()}: {value}")
+
+    loop_through_items(person)
+
 
 if __name__ == '__main__':
     main()
