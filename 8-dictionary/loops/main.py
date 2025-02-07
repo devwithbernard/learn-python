@@ -26,6 +26,14 @@ def main() -> None:
 
     print_key_value(person)
 
+    def loop_through_values(data: dict) -> None:
+        if data:
+            print("Person:")
+            for value in data.values():
+                print(f"\t{value}")
+
+    loop_through_values(person)
+
 
 if __name__ == '__main__':
     main()
