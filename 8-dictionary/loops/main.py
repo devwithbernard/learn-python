@@ -19,6 +19,13 @@ def main() -> None:
 
     loop_through_keys(person)
 
+    def print_key_value(data: dict) -> None:
+        if data:
+            for key in data:
+                print(f"{key} => {data[key]}")
+
+    print_key_value(person)
+
 
 if __name__ == '__main__':
     main()
