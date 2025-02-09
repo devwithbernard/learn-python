@@ -21,6 +21,22 @@ def main() -> None:
 
         number -= 1
 
+    # Continue Statement
+    names: list[str] = ['John', 'Jane', 'Annabella', 'Chris']
+
+    all_names_without_annabella: list = []
+
+    counter: int = len(names)
+
+    while counter > 0:
+        counter -= 1
+        if names[counter] == 'Annabella':
+            continue
+        else:
+            all_names_without_annabella.append(tuple([counter, names[counter]]))
+
+    print(all_names_without_annabella)
+
 
 if __name__ == '__main__':
     main()
