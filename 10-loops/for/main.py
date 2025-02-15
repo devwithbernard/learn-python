@@ -80,6 +80,33 @@ def double():
         print(f"\t{double_number}")
 
 
+def matrix(number_of_rows: int = 1, number_of_cols: int = 1):
+    if number_of_rows == 0 or number_of_cols == 0:
+        raise ValueError(f"row or col must be superior to 0")
+
+    if number_of_rows == 1 and number_of_cols == 1:
+        return [number_of_rows, number_of_cols]
+
+    nested_list: List[List[int]] = []
+
+    for i in range(number_of_rows):
+        row = []
+        for j in range(number_of_cols):
+            row.append(i+j)
+        nested_list.append(row)
+
+    return nested_list
+
+
+@decorate_func
+def iterate_matrix():
+    tab = matrix(3, 3)
+
+    print("MATRIX:")
+    for row in tab:
+        print(f"\t{row}")
+
+
 def main() -> None:
     fruits: List[str] = ['Banana', 'Mango', 'Cherry', 'Pineapple']
 
@@ -96,6 +123,8 @@ def main() -> None:
     range_function()
 
     double()
+
+    iterate_matrix()
 
 
 if __name__ == '__main__':
