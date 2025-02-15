@@ -27,6 +27,11 @@ def uppercase(text: str) -> str:
     return text.upper()
 
 
+# Multiple positional arguments
+def sum_numbers(*numbers) -> float:
+    return sum(numbers)
+
+
 def main() -> None:
     greet()
 
@@ -38,6 +43,8 @@ def main() -> None:
     upper_names: list[str] = [uppercase(name) for name in names]
     for upper_name in upper_names:
         print(upper_name)
+
+    print("Sum of 1, 2, 3, 4, 5 = ", sum_numbers(1, 2, 3, 4, 5))
 
 
 if __name__ == '__main__':
