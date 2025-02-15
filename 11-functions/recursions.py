@@ -7,3 +7,21 @@ A recursive function has two main parts:
     Base Case –> The condition that stops recursion.
     Recursive Case –> The function calls itself with a smaller input.
 """
+
+
+def countdown(number: int) -> None:
+    if number <= 0:
+        print("Done 👌")
+        return None
+
+    print(number)
+    countdown(number - 1)
+
+
+def main() -> None:
+    # Count down with recursion
+    countdown(10)
+
+
+if __name__ == '__main__':
+    main()
