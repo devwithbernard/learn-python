@@ -26,12 +26,41 @@ def even_numbers(min_number: int, max_number: int, callback: typing.Callable) ->
         raise Exception(f"{min_number} must be less than {max_number}")
 
 
+def iterate_over_string(text: str) -> None:
+    print(f"{text}:")
+
+    for character in text:
+        print(f"\t{character}")
+
+
+def capitalize(text: str) -> str:
+    letter_dict: dict[str, str] = {
+        chr(i): chr(i).upper() for i in range(ord('a'), ord('z') + 1)
+    }
+
+    upper_text: str = ''
+
+    for letter in text.lower():
+        if letter not in letter_dict.keys():
+            upper_text += letter
+            continue
+        upper_text += letter_dict.get(letter)
+
+    return upper_text
+
+
 def main() -> None:
     fruits: List[str] = ['Banana', 'Mango', 'Cherry', 'Pineapple']
 
     iterate_over_list(fruits)
 
     even_numbers(1, 30, print_even_number)
+
+    text: str = "I love python"
+
+    iterate_over_string(text)
+
+    print(capitalize(text))
 
 
 if __name__ == '__main__':
