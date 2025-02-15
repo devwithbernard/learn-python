@@ -34,6 +34,12 @@ def fibonacci(number: int) -> int:
     return factorial(number - 1) + factorial(number - 2)
 
 
+def sum_of_numbers(numbers: list[int]) -> int:
+    if not numbers:
+        return 0  # Empty list
+    return numbers[0] + sum_of_numbers(numbers[1:])
+
+
 def main() -> None:
     # Count down with recursion
     countdown(10)
@@ -43,6 +49,9 @@ def main() -> None:
 
     # Fibonacci number
     print(fibonacci(6))
+
+    # Finding sum of numbers recursively
+    print("Sum:", sum_of_numbers([i for i in range(10)]))
 
 
 if __name__ == '__main__':
