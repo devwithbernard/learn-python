@@ -13,8 +13,19 @@ def greet() -> None:
     print("Hello, World!")
 
 
+# Function with parameters
+
+def say_hello(name: str) -> None:
+    print(f"Hello, {name}")
+
+
 def main() -> None:
     greet()
+
+    names: list[str] = ['Carlos', 'Jessie', 'Tania']
+
+    for name in names:
+        say_hello(name)
 
 
 if __name__ == '__main__':
