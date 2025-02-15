@@ -32,6 +32,12 @@ def sum_numbers(*numbers) -> float:
     return sum(numbers)
 
 
+# Keywords arguments
+def print_info(**details):
+    for key, value in details.items():
+        print(f"{key} => {value}")
+
+
 def main() -> None:
     greet()
 
@@ -45,6 +51,8 @@ def main() -> None:
         print(upper_name)
 
     print("Sum of 1, 2, 3, 4, 5 = ", sum_numbers(1, 2, 3, 4, 5))
+
+    print_info(name="Konan Bernard", email="devwithbernard@gmail.com", city="Abidjan")
 
 
 if __name__ == '__main__':
