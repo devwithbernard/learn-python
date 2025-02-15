@@ -38,6 +38,14 @@ def print_info(**details):
         print(f"{key} => {value}")
 
 
+# Lambda (Anonymous) functions
+def lambda_functions() -> None:
+    numbers: list[int] = [1, 2, 3, 4]
+    squares: list[int] = list(map(lambda number: number * 2, numbers))
+
+    print(f"Square of {numbers} => {squares}")
+
+
 def main() -> None:
     greet()
 
@@ -53,6 +61,8 @@ def main() -> None:
     print("Sum of 1, 2, 3, 4, 5 = ", sum_numbers(1, 2, 3, 4, 5))
 
     print_info(name="Konan Bernard", email="devwithbernard@gmail.com", city="Abidjan")
+
+    lambda_functions()
 
 
 if __name__ == '__main__':
