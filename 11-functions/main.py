@@ -46,6 +46,15 @@ def lambda_functions() -> None:
     print(f"Square of {numbers} => {squares}")
 
 
+def even_numbers(numbers: list[int]) -> list[int]:
+    if not numbers:
+        raise ValueError('Empty list')
+
+    even_nums: list[int] = list(filter(lambda number: number % 2 == 0, numbers))
+
+    return even_nums
+
+
 def main() -> None:
     greet()
 
@@ -63,6 +72,9 @@ def main() -> None:
     print_info(name="Konan Bernard", email="devwithbernard@gmail.com", city="Abidjan")
 
     lambda_functions()
+
+    print(f"Even numbers: ")
+    print(f"\t{even_numbers(list(range(20)))}")
 
 
 if __name__ == '__main__':
