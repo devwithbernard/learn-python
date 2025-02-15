@@ -19,6 +19,14 @@ def say_hello(name: str) -> None:
     print(f"Hello, {name}")
 
 
+# Function with return value
+def uppercase(text: str) -> str:
+    if text is None:
+        raise ValueError("Parameter can't be a NoneType")
+
+    return text.upper()
+
+
 def main() -> None:
     greet()
 
@@ -26,6 +34,10 @@ def main() -> None:
 
     for name in names:
         say_hello(name)
+
+    upper_names: list[str] = [uppercase(name) for name in names]
+    for upper_name in upper_names:
+        print(upper_name)
 
 
 if __name__ == '__main__':
