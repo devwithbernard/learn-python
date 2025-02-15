@@ -5,6 +5,7 @@ You can pass data, known as parameters, into a function.
 
 A function can return data as a result.
 """
+import math
 
 
 # Define a block of function
@@ -55,6 +56,26 @@ def even_numbers(numbers: list[int]) -> list[int]:
     return even_nums
 
 
+def is_prime(number: int) -> bool:
+    if number <= 1:
+        return False
+    if number == 2:
+        return True
+    if number % 2 == 0:
+        return False
+
+    for i in range(3, int(math.sqrt(number)) + 1, 2):
+        if number % i == 0:
+            return False
+
+    return True
+
+
+def prime_numbers(min_number: int, max_number: int) -> list[int]:
+    nums: list[int] = list(filter(lambda number: is_prime(number), range(min_number, max_number)))
+    return nums
+
+
 def main() -> None:
     greet()
 
@@ -75,6 +96,9 @@ def main() -> None:
 
     print(f"Even numbers: ")
     print(f"\t{even_numbers(list(range(20)))}")
+
+    print("Prime numbers between 1 and 100")
+    print(prime_numbers(1, 200))
 
 
 if __name__ == '__main__':
