@@ -18,9 +18,19 @@ def countdown(number: int) -> None:
     countdown(number - 1)
 
 
+def factorial(number: int) -> int:
+    if number == 0 or number == 1:
+        return 1
+
+    return number * factorial(number - 1)
+
+
 def main() -> None:
     # Count down with recursion
     countdown(10)
+
+    # Factorial using recursion
+    print(factorial(5))  # 120
 
 
 if __name__ == '__main__':
