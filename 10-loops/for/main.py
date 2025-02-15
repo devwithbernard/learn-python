@@ -49,6 +49,37 @@ def capitalize(text: str) -> str:
     return upper_text
 
 
+def range_function() -> None:
+    numbers: range = range(10)
+
+    print("Range of numbers: ")
+    for number in numbers:
+        print(number)
+
+
+def decorate_func(fn):
+    def wrapper(*args, **kwargs):
+        print(f"---Start of {fn.__name__}---")
+        result = fn(*args, **kwargs)
+        print(f"---End of {fn.__name__}---")
+        return result
+
+    return wrapper
+
+
+@decorate_func
+def double():
+    def is_even(number: int) -> bool:
+        return number % 2 == 0
+
+    double_numbers: List[int] = [number * 2 for number in range(20) if is_even(number)]
+
+    print("Double even numbers: ")
+
+    for double_number in double_numbers:
+        print(f"\t{double_number}")
+
+
 def main() -> None:
     fruits: List[str] = ['Banana', 'Mango', 'Cherry', 'Pineapple']
 
@@ -61,6 +92,10 @@ def main() -> None:
     iterate_over_string(text)
 
     print(capitalize(text))
+
+    range_function()
+
+    double()
 
 
 if __name__ == '__main__':
