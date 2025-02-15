@@ -25,12 +25,24 @@ def factorial(number: int) -> int:
     return number * factorial(number - 1)
 
 
+def fibonacci(number: int) -> int:
+    if number == 0:
+        return 0
+    if number == 1:
+        return 1
+
+    return factorial(number - 1) + factorial(number - 2)
+
+
 def main() -> None:
     # Count down with recursion
     countdown(10)
 
     # Factorial using recursion
     print(factorial(5))  # 120
+
+    # Fibonacci number
+    print(fibonacci(6))
 
 
 if __name__ == '__main__':
