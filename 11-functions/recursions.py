@@ -40,6 +40,20 @@ def sum_of_numbers(numbers: list[int]) -> int:
     return numbers[0] + sum_of_numbers(numbers[1:])
 
 
+def binary_search_recursive(array, target, low, high):
+    if low > high:
+        return -1  # Base case: Element not found
+
+    middle = (low + high) // 2
+
+    if array[middle] == target:
+        return middle
+    elif array[middle] > target:
+        return binary_search_recursive(array, target, low, middle - 1)
+    else:
+        return binary_search_recursive(array, target, middle + 1, high)
+
+
 def main() -> None:
     # Count down with recursion
     countdown(10)
@@ -52,6 +66,14 @@ def main() -> None:
 
     # Finding sum of numbers recursively
     print("Sum:", sum_of_numbers([i for i in range(10)]))
+
+    # Recursive binary search
+    arr: list[int] = [1, 3, 5, 7, 11, 19]
+    target: int = 7
+
+    result = binary_search_recursive(arr, target, 0, len(arr) - 1)
+
+    print("Element found at index:", result) if result != -1 else print("Element not found")
 
 
 if __name__ == '__main__':
