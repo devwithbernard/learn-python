@@ -11,10 +11,16 @@ class Car:
         self.brand: str = brand
         self.color: str = color
 
+    def description(self) -> str:
+        return f"{self.brand} car of {self.color} color"
+
 
 def main() -> None:
     car: Car = Car('Tesla', 'red')
-    print(f"{car.brand} Car of {car.color} ")
+    print(f"{car.brand} Car of {car.color}")
+
+    car_2: Car = Car('Peugeot', 'blue')
+    print(car_2.description())
 
 
 if __name__ == '__main__':
