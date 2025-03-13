@@ -34,7 +34,7 @@ def main() -> None:
     car_2.mean_speed = 80.0
 
     print(f"""
-    Car 
+    Car
        brand: {car_2.brand}
        color: {car_2.color}
        mean_speed: {car_2.mean_speed} km/h
