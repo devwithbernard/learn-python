@@ -6,7 +6,6 @@
    - Add, update, and delete books
    - Book categorization (e.g., Fiction, Non-fiction, Science, History)
    - Book search & filter (by title, author, genre, availability)
-   - Barcode/QR code support for book identification
 ## Borrowing & Returning System
    - Book issue & return tracking
    - Due date & overdue fine calculation
