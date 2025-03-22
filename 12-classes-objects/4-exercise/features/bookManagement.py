@@ -14,27 +14,37 @@ class Book:
 class BookLibrary:
     books: List[dict] = []
 
-    def add(self, book: Book) -> None:
-        self.books.append(book.__dict__)
+    @classmethod
+    def add(cls, book: Book) -> None:
+        cls.books.append(book.__dict__)
 
-    def update(self, title: str, author: str = None, published_date: str = None):
+    @classmethod
+    def update(cls, title: str, author: str = None, published_date: str = None):
         if not title:
-            return "book infos can't be updated! "
+            print("book infos can't be updated! ")
+            return None
 
-        book_titles: List[str] = [book['title'].capitalize() for book in self.books]
+        book_titles: List[str] = [book['title'].upper() for book in cls.books]
 
-        if title.capitalize() not in book_titles:
-            return "Book not in database!"
+        if title.upper() not in book_titles:
+            print(f"Book titled '{title}' is not in library!")
+            return None
 
-        book_infos = dict(filter(lambda book: book['title'].capitalize() == title.capitalize(), self.books))
+        book_infos = list(filter(lambda book: book['title'].capitalize() == title.capitalize(), cls.books))[0]
 
         book_infos['title'] = title
 
         if author:
             book_infos['author'] = author
         if published_date:
-            book_infos['published_date'] = '2025'
+            book_infos['published_date'] = published_date
 
 
 if __name__ == "__main__":
-    b: Book = Book('Hey', 'Hi', '1809/03/14')
+    b0: Book = Book('Hey', 'Hi', '2010/09/15')
+    b1: Book = Book('Les fleurs du mal', 'Hi', '1809/03/14')
+    b2: Book = Book('AI Agent', 'Daniel Altman', '2009/03/14')
+
+    BookLibrary.add(b0)
+    BookLibrary.add(b1)
+    BookLibrary.add(b2)
