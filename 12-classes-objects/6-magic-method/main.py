@@ -17,6 +17,18 @@ class Employee:
     def __str__(self) -> str:
         return f"<{self.fullname()}>"
 
+    def __repr__(self):
+        return f"Employee({self.firstname}, {self.lastname},{self.pay})"
+
+    def __format__(self, format_spec):
+        return f"{self.pay:.2f}"
+
+    def __add__(self, other):
+        return float(self.pay + other.pay)
+
+    def __len__(self) -> int:
+        return len(self.fullname())
+
     def fullname(self) -> str:
         """Get full name of this person"""
         return f"{self.firstname} {self.lastname}"
@@ -28,4 +40,11 @@ class Employee:
 
 if __name__ == "__main__":
     emp_1: Employee = Employee("John", "Doe", 80_000)
-    # emp_2: Employee = Employee("David", "William", 90_000)
+    print(repr(emp_1))
+    print(format(emp_1))
+
+    emp_2: Employee = Employee("David", "William Alby", 90_000)
+
+    print(emp_1 + emp_2)
+
+    print(len(emp_2))
