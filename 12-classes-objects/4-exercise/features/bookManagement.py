@@ -39,6 +39,20 @@ class BookLibrary:
         if published_date:
             book_infos['published_date'] = published_date
 
+    @classmethod
+    def delete(cls, title: str) -> None:
+        if not title:
+            print("Provide valid title for deleting book")
+            return None
+
+        book_titles: List[str] = [book['title'].upper() for book in cls.books]
+
+        if title.upper() not in book_titles:
+            print(f"No book titled '{title}'\nIt can't be deleted!")
+            return None
+
+        cls.books = [book for book in cls.books if book['title'].upper() != title.upper()]
+
 
 if __name__ == "__main__":
     b0: Book = Book('Hey', 'Hi', '2010/09/15')
@@ -48,3 +62,4 @@ if __name__ == "__main__":
     BookLibrary.add(b0)
     BookLibrary.add(b1)
     BookLibrary.add(b2)
+
