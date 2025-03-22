@@ -1,5 +1,12 @@
 class Employee:
     raise_amount: float = 1.04
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+            print("class instance created")
+        return cls._instance
 
     def __init__(self, firstname: str, lastname: str, pay: float) -> None:
         self.firstname = firstname
@@ -21,4 +28,4 @@ class Employee:
 
 if __name__ == "__main__":
     emp_1: Employee = Employee("John", "Doe", 80_000)
-    emp_2: Employee = Employee("David", "William", 90_000)
+    # emp_2: Employee = Employee("David", "William", 90_000)
