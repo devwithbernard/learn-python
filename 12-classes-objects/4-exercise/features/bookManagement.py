@@ -14,6 +14,7 @@ class Book:
 
 class BookLibrary:
     books: List[dict] = []
+    categories: dict = {}
 
     @classmethod
     def add(cls, book: Book) -> None:
@@ -54,13 +55,26 @@ class BookLibrary:
 
         cls.books = [book for book in cls.books if book['title'].upper() != title.upper()]
 
+    @classmethod
+    def categorize_books(cls):
+        for book in cls.books:
+            category: str = book['category']
+
+            if category not in cls.categories:
+                cls.categories[category] = []
+
+            cls.categories[category].append(book)
+
 
 if __name__ == "__main__":
-    b0: Book = Book('Hey', 'Hi', '2010/09/15')
-    b1: Book = Book('Les fleurs du mal', 'Hi', '1809/03/14')
-    b2: Book = Book('AI Agent', 'Daniel Altman', '2009/03/14')
+    b0: Book = Book('Hey', 'Hi', '2010/09/15', 'Fiction')
+    b1: Book = Book('Les fleurs du mal', 'Hi', '1809/03/14', 'Tragedy')
+    b2: Book = Book('AI Agent', 'Daniel Altman', '2009/03/14', 'AI')
 
     BookLibrary.add(b0)
     BookLibrary.add(b1)
     BookLibrary.add(b2)
 
+    BookLibrary.categorize_books()
+
+    print(BookLibrary.categories)
