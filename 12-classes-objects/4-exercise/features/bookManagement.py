@@ -2,10 +2,11 @@ from typing import List
 
 
 class Book:
-    def __init__(self, title: str, author: str, published_date: str) -> None:
+    def __init__(self, title: str, author: str, published_date: str, category: str = None) -> None:
         self.title = title
         self.author = author
-        self.published_date: str = published_date
+        self.published_date = published_date
+        self.category = category
 
     def __str__(self) -> str:
         return self.title
