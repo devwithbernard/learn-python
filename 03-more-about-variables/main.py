@@ -14,3 +14,9 @@ age: int = 28
 
 print(age)
 print(f"Type of '{age}' =>", type(age))
+
+number1 = 100
+number2 = "100"
+
+print(number1 + number1)  # 200
+print(number2 + number2)  # 100100
