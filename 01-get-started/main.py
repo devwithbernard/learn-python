@@ -8,9 +8,9 @@ print("First, we will practice using the print command.")
 print("This program prints three lines of text on the screen.")
 
 # Arithmetic Operations
-print(2*2 + 3)
-print(5+6 - 2 + 8*9)
-print(2 + 2*10)
+print(2 * 2 + 3)
+print(5 + 6 - 2 + 8 * 9)
+print(2 + 2 * 10)
 
 print("Hours in a year:")
 print(365 * 24, "hours")
@@ -20,7 +20,6 @@ print(365 * 24, "hours")
 Write a program that print an emoticon
 """
 print("Hello mate 😃!")
-
 
 """
 This program is supposed to print the followings names in alphabetical order:
@@ -48,3 +47,11 @@ print("Row, row, row your boat,")
 print("Gently down the stream.")
 print("Merrily, merrily, merrily, merrily,")
 print("Life is but a dream.")
+
+"""
+Minutes & Seconds in a year:
+Write a program that print the number of minutes and seconds in a calendar year
+"""
+print("Minutes & Seconds in a year:")
+print(365 * 24 * 60, "Minutes")
+print(365 * 24 * 60 * 60, "Seconds")
