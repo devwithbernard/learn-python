@@ -24,5 +24,13 @@
 > - You will know what kind of data can be stored in variables
 > - You will understand the difference between strings, integers and floating point numbers
 
+## 4- Conditional Statements
+
+> ### Learning objectives
+> ***After this section***
+> - You will be able to use a simple conditional statement in programming
+> - You will know what a Boolean value is
+> - You will be able to express conditionals with comparison operators
+
 
 
