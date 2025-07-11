@@ -35,3 +35,21 @@ print(first_name)
 print(last_name)
 print(street)
 print(city_postal)
+
+"""
+Story programming exercise:
+
+Write a program which prints out the following story. The user gives a name and a year, 
+which should be inserted into the printout.
+"""
+
+name: str = input("Please, Enter the name: ")
+year: str = input("Please, Enter the year: ")
+
+story = f"""
+{name} is a valiant knight, born in the year {year}. One morning Mary woke up to an 
+awful racket: a dragon was approaching the village. Only Mary could save the
+village's residents.
+"""
+
+print(story)
