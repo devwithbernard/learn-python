@@ -35,3 +35,10 @@ print(f"Quantity: {quantity}")
 print(f"Total price: ${price * quantity}")
 
 
+# Floating Numbers
+PI: float = 3.1415
+circle_radius: float = 2.5
+
+circle_area: float = round(PI * circle_radius * circle_radius, 2)
+
+print(f"The area of circle which radius is {circle_area}cm is: {circle_radius}cm2.")
