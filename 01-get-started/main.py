@@ -7,6 +7,14 @@ print("Welcome to Introduction of Programming!")
 print("First, we will practice using the print command.")
 print("This program prints three lines of text on the screen.")
 
+# Arithmetic Operations
+print(2*2 + 3)
+print(5+6 - 2 + 8*9)
+print(2 + 2*10)
+
+print("Hours in a year:")
+print(365 * 24, "hours")
+
 # Exercises
 """
 Write a program that print an emoticon
