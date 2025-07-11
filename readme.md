@@ -16,5 +16,13 @@
 > - You will know to use variables to store input and print it out
 > - You will be able to combine strings
 
+## 3- More about variables
+
+> ### Learning objectives
+> ***After this section***
+> - You will be able to use variables in different contexts
+> - You will know what kind of data can be stored in variables
+> - You will understand the difference between strings, integers and floating point numbers
+
 
 
