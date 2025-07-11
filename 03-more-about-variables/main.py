@@ -8,3 +8,9 @@ print(word)
 
 word = "Third"
 print(word)
+
+# Integers
+age: int = 28
+
+print(age)
+print(f"Type of '{age}' =>", type(age))
