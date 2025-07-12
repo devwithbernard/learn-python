@@ -114,6 +114,18 @@ elif operation == "subtract":
     calculus = number1 - number2
     print(f"{number1} - {number2} = {calculus}")
 
+"""
+Temperature
+"""
+
+temperature_in_fahrenheit = int(input("Please type in the temperature (°F): "))
+
+if temperature_in_fahrenheit <= 0:
+    print("Brr! It's cold in here!")
+else:
+    temperature_in_degree = (temperature_in_fahrenheit - 32) * 9/5
+    print(f"{temperature_in_fahrenheit}°F = {temperature_in_degree:,.2f}°C")
+
 
 
 
