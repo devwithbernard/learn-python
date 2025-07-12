@@ -96,4 +96,24 @@ else:
     print("Negative number not allowed!")
 
 
+"""
+Calculator
+"""
+
+number1 = float(input("Number 1: "))
+number2 = float(input("Number 2: "))
+operation = input("Operation (add, multiply, subtract): ").lower()
+
+if operation == "add":
+    calculus = number1 + number2
+    print(f"{number1} + {number2} = {calculus}")
+elif operation == "multiply":
+    calculus = number1 * number2
+    print(f"{number1} x {number2} = {calculus}")
+elif operation == "subtract":
+    calculus = number1 - number2
+    print(f"{number1} - {number2} = {calculus}")
+
+
+
 
