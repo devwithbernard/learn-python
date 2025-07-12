@@ -152,6 +152,31 @@ else:
     print(text)
     print(f"Daily wages: {daily_wage} euros")
 
+"""
+Solving a quadratic equation
+aX2 + bX + c = 0
+"""
+
+from math import pow, sqrt
+
+a = float(input("Value of a: "))
+b = float(input("Value of b: "))
+c = float(input("Value of c: "))
+
+delta = pow(b, 2) - 4 * a * c
+
+x1, x2 = None, None
+
+if delta < 0:
+    print("No solution of equation")
+elif delta == 0:
+    x1 = -b / (2 * a)
+    print(f"x1 = {x1}")
+else:
+    x1 = (-b - sqrt(delta)) / (2 * a)
+    x2 = (-b + sqrt(delta)) / (2 * a)
+    print(f"x1 = {x1}, x2 = {x2}")
+
 
 
 
