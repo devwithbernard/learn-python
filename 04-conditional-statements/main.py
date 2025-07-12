@@ -147,7 +147,7 @@ else:
     daily_wage = hourly_wage * hours_worked
 
     if weekday == "Sunday":
-        daily_wage = 250.0
+        daily_wage *= 2
 
     print(text)
     print(f"Daily wages: {daily_wage} euros")
