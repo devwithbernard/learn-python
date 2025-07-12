@@ -9,6 +9,16 @@ else:
     print("Denied Access...")
     print("Next costumer, please!")
 
+# Comparison operators
+number = int(input("Please type a number: "))
+
+if number < 0:
+    print("The number is negative.")
+elif number > 0:
+    print("The number is positive.")
+elif number == 0:
+    print(print("The number is zero."))
+
 # Exercise
 """
 Write a program and check if a student can pass to next class
