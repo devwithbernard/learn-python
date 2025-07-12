@@ -126,6 +126,32 @@ else:
     temperature_in_degree = (temperature_in_fahrenheit - 32) * 9/5
     print(f"{temperature_in_fahrenheit}°F = {temperature_in_degree:,.2f}°C")
 
+"""
+Daily Wages
+"""
+hourly_wage = float(input("Hourly wage: "))
+hours_worked = float(input("Hours worked: "))
+weekday = input("Day of the week: ").strip()
+
+weekdays = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+text = f"""
+Hourly wage: {hourly_wage}
+Hours worked: {hours_worked}
+Day of the week: {weekday}
+"""
+
+if weekday not in weekdays:
+    print("Closed company!")
+else:
+    daily_wage = hourly_wage * hours_worked
+
+    if weekday == "Sunday":
+        daily_wage = 250.0
+
+    print(text)
+    print(f"Daily wages: {daily_wage} euros")
+
 
 
 
