@@ -88,3 +88,17 @@ elif number % 3 == 0:
     print("Fizz")
 elif number % 5 == 0:
     print("Buzz")
+
+"""
+Leap year
+"""
+
+year = int(input("Please type in a year: "))
+
+if year < 0:
+    print(f"Year must be positive.")
+else:
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        print(f"{year} is a leap year.")
+    else:
+        print(f"{year} is not a leap year.")
