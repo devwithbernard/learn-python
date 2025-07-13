@@ -73,3 +73,17 @@ elif person2_age > person1_age:
     print(f"The elder is {person2_name}")
 else:
     print(f"{person1_name} and {person2_name} are the same age.")
+
+"""
+Alphabetically last
+"""
+
+first_word = input("Please type in the 1st word: ")
+second_word = input("Please type in the 2nd word: ")
+
+if first_word.lower() > second_word.lower():
+    print(f"{first_word} comes alphabetically last.")
+elif second_word.lower() > first_word.lower():
+    print(f"{second_word} comes alphabetically last.")
+else:
+    print("You gave the same word twice.")
