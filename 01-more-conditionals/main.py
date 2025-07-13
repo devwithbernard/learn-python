@@ -17,6 +17,17 @@ if new_number < 0:
 else:
     print(f"{new_number} is positive or zero")
 
+# Alternative branches using elif statement
+goals_home = int(input("Home goals scored: "))
+goals_away = int(input("Away goals scored: "))
+
+if goals_home > goals_away:
+    print("The home team won!")
+elif goals_away > goals_home:
+    print("The way team won!")
+else:
+    print("It's a tie!")
+
 # Exercises
 """
 Age of maturity
