@@ -63,3 +63,16 @@ elif 90 <= points <= 100:
     grade = 5
 
 print(f"Grade: {grade}")
+
+"""
+FizzBuzz
+"""
+
+number = int(input("Number: "))
+
+if number % 3 == 0 and number % 5 == 0:
+    print("FizzBuzz")
+elif number % 3 == 0:
+    print("Fizz")
+elif number % 5 == 0:
+    print("Buzz")
