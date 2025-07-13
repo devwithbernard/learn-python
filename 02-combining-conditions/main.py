@@ -27,6 +27,18 @@ else:
 
 print(f" {greatest} is the greatest of the numbers")
 
+# Nested conditionals
+
+number = int(input("Please type in the a number: "))
+
+if number > 0:
+    if number % 2 == 0:
+        print(f"{number} is even.")
+    else:
+        print(f"{number} is odd.")
+else:
+    print("The number is negative or zero.")
+
 # Exercises
 """
 Age check
