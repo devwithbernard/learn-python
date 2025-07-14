@@ -17,3 +17,10 @@ statements within a conditional statement
 conditions
 > - You will be able to write nested conditionals
 
+## 3- Simple Loops
+
+> ### Learning objectives
+>***After this section***
+> - You will know what a loop means in programming
+> - You will be able to use a <mark>while True</mark> loop in your programs
+> - You will know how to use the <mark>break</mark> command to break out of a loop
