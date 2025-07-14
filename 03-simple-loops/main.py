@@ -9,3 +9,11 @@ while True:
     print(f"n² = {number**2}")
 
 print(f"Thanks and bye!")
+
+# While loop: PIN Code
+while True:
+    code = input("Enter your PIN: ")
+    if code == "1234":
+        break
+    print("Incorrect...Try again")
+print("Correct PIN entered!")
