@@ -43,3 +43,17 @@ while True:
         print(number**2)
 
 print("Exiting...")
+
+"""
+Repeat password
+"""
+password = input("Password: ")
+
+while True:
+    repeated_password = input("Repeat password: ")
+
+    if password == repeated_password:
+        print("User account created!")
+        break
+    else:
+        print("They do not match!")
