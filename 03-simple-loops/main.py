@@ -17,3 +17,14 @@ while True:
         break
     print("Incorrect...Try again")
 print("Correct PIN entered!")
+
+# Exercises
+"""
+Shall we continue?
+"""
+while True:
+    print("hi")
+    yesno = input("Shall we continue? ")
+    if yesno.lower() == "no":
+        break
+print("Okay then")
