@@ -28,3 +28,18 @@ while True:
     if yesno.lower() == "no":
         break
 print("Okay then")
+
+"""
+Input validation
+"""
+while True:
+    number = int(input("Please type in a number: "))
+
+    if number < 0:
+        print("Invalid number")
+    elif number == 0:
+        break
+    else:
+        print(number**2)
+
+print("Exiting...")
