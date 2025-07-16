@@ -57,3 +57,16 @@ while True:
         break
     else:
         print("They do not match!")
+
+"""
+Story
+"""
+story = ""
+
+while True:
+    word = input("Please type in a word: ")
+    if word == "end":
+        break
+    else:
+        story += word + " "
+print(story.strip())
