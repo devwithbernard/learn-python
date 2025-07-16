@@ -73,3 +73,35 @@ while True:
         previous_word = word
 
 print(story.strip())
+
+"""
+Working with numbers
+"""
+print("Please type in integer numbers. Type in 0 to finish.")
+
+number_typed = 0
+count_positive_numbers = 0
+count_negative_numbers = 0
+sum_of_numbers = 0
+
+while True:
+    number = int(input("Number: "))
+    number_typed += 1
+    sum_of_numbers += number
+
+    if number == 0:
+        break
+
+    if number > 0:
+        count_positive_numbers += 1
+    else:
+        count_negative_numbers += 1
+
+if number_typed > 0:
+    # Part: Count, Sum, Mean
+    print("... The program asks for numbers")
+    print(f"Numbers typed in {number_typed}")
+    print(f"The sum of the numbers is {sum_of_numbers}")
+    print(f"The mean of the number is {sum_of_numbers/number_typed:,.1f}")
+    print(f"Positive numbers {count_positive_numbers}")
+    print(f"Negative numbers {count_negative_numbers}")
