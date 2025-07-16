@@ -63,10 +63,13 @@ Story
 """
 story = ""
 
+previous_word = ""
 while True:
     word = input("Please type in a word: ")
-    if word == "end":
+    if word == previous_word or word == "end":
         break
     else:
         story += word + " "
+        previous_word = word
+
 print(story.strip())
