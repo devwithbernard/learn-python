@@ -37,3 +37,11 @@ while number > 0:
     number -= 1
 
 print("Now!")
+
+# TODO: Numbers
+number = int(input("Upper limit: "))
+limit = 1
+
+while number > limit:
+    print(number - 1)
+    number -= 1
