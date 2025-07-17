@@ -76,3 +76,20 @@ while start <= limit:
     start += 1
 
 print("sum: ", sum_of_numbers)
+
+# TODO: The sum of consecutive numbers, version 2
+limit = int(input("Limit: "))
+sum_of_numbers = 0
+
+start = 1
+string = ""
+
+while start <= limit:
+    if sum_of_numbers >= limit:
+        break
+
+    sum_of_numbers += start
+    string += f"{start} + " if sum_of_numbers <= limit else f"{start}"
+    start += 1
+
+print(f"{string} = {sum_of_numbers}")
