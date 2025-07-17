@@ -16,7 +16,6 @@ while number < 100 and number % 5 != 0:  # Condition
     print(number)
     number += 3
 
-
 """
 Exercises
 """
@@ -53,3 +52,12 @@ number = 1
 while number < upper_limit:
     print(number)
     number *= 2
+
+# TODO: Powers of base n
+upper_limit = int(input("Upper limit: "))
+base = int(input("Base: "))
+
+start = 1
+while start <= upper_limit:
+    print(start)
+    start *= base
