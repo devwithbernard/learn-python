@@ -61,3 +61,18 @@ start = 1
 while start <= upper_limit:
     print(start)
     start *= base
+
+# TODO: The sum of consecutive numbers, version 1
+limit = int(input("Limit: "))
+sum_of_numbers = 0
+
+start = 1
+
+while start <= limit:
+    if sum_of_numbers >= limit:
+        break
+
+    sum_of_numbers += start
+    start += 1
+
+print("sum: ", sum_of_numbers)
