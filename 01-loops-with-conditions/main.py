@@ -20,3 +20,12 @@ while number <= 30:
     print(number)
     number += 1
 
+# TODO: Fix the code: Countdown
+print("Are you ready?")
+number = int(input("Please type in a number"))
+
+while number > 0:
+    print(number)
+    number -= 1
+
+print("Now!")
