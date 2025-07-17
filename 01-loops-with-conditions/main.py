@@ -8,3 +8,15 @@ while number < 10:  # Condition
 
 print("Execution finished.")
 
+
+"""
+Exercises
+"""
+
+# TODO: Print numbers
+number = 2
+
+while number <= 30:
+    print(number)
+    number += 1
+
