@@ -45,3 +45,11 @@ limit = 1
 while number > limit:
     print(number - 1)
     number -= 1
+
+# TODO: Powers of two
+upper_limit = int(input("Upper limit: "))
+number = 1
+
+while number < upper_limit:
+    print(number)
+    number *= 2
