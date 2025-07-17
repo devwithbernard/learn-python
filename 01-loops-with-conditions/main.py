@@ -8,6 +8,14 @@ while number < 10:  # Condition
 
 print("Execution finished.")
 
+# TODO: Writing conditions
+
+number = int(input("Please, type in a number: "))
+
+while number < 100 and number % 5 != 0:  # Condition
+    print(number)
+    number += 3
+
 
 """
 Exercises
