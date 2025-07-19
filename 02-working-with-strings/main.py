@@ -131,3 +131,12 @@ underlining = "-" * len(string)
 print(string)
 print(underlining)
 
+# TODO: Right-aligned
+string = input("Type in a string: ")
+
+if len(string) > 20:
+    print(string)
+else:
+    star = "*" * (20 - len(string))
+    print(star + string)
+
