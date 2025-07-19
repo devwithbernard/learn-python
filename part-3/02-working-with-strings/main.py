@@ -245,3 +245,30 @@ if found_index >= 0:
         print("The returned substring is not valid")
 else:
     print(f"'{char}' not in '{word}'")
+
+# TODO: The second occurrence
+word = None
+substring = None
+
+while True:
+    word = input("Please type in a string: ")
+    substring = input("Please type in a substring: ")
+
+    if (word and substring) and (len(word) > len(substring)):
+        break
+    else:
+        print("word or substring must be incorrect.")
+
+first_occurrence_index = word.find(substring)
+
+if first_occurrence_index >= 0:
+    sliced_substring = word[first_occurrence_index + 1:]
+    second_occurrence_index = sliced_substring.find(substring)
+
+    if second_occurrence_index >= 0:
+        print(f"The second occurrence of the substring is at index "
+              f"{first_occurrence_index + second_occurrence_index + 1}")
+    else:
+        print("The substring does not occur twice in the string.")
+else:
+    print("The substring is not in string.")
