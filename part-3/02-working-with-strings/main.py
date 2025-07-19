@@ -210,3 +210,14 @@ We use the same entry as part 1
 if text:
     for i in range(1, len(text) + 1):
         print(text[len(text) - i:])
+
+# TODO: Does it contain vowels
+word = input("Please type in a string: ")
+vowels = ("a", "e", "i", "o", "u", "y")
+
+if word:
+    for vowel in vowels:
+        if vowel in word:
+            print(f"{vowel} found")
+        else:
+            print(f"{vowel} not found")
