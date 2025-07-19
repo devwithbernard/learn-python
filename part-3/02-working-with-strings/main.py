@@ -77,6 +77,28 @@ print(string[4:10])
 print(string[:3])
 print(string[4:])
 
+# TODO: Searching for substrings
+input_string = "test"
+
+print(f"'t' is in '{input_string}'") if 't' in input_string else print("Not in")
+print(f"'x' is in '{input_string}'") if 'x' in input_string else print("Not in")
+print(f"'es' is in '{input_string}'") if 'es' in input_string else print("Not in")
+print(f"'ets' is in '{input_string}'") if 'ets' in input_string else print("Not in")
+
+# Searching for a substring
+word = "perpendicular"
+print(f"Word: {word}")
+
+while True:
+    substring = input("What are you looking for in word? ('Q' ou 'Quit' to exit): ")
+    if substring.lower() in ('q', 'quit'):
+        break
+
+    if substring in word:
+        print("Found it")
+    else:
+        print("Not found")
+
 """
 Exercise
 """
