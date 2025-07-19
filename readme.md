@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Learn Python: Part 1
 
 ## 1- Getting started
@@ -37,11 +38,15 @@
 
 =======
 # Learn Python: Part 2
+=======
+# Learn Python: Part 3
+>>>>>>> origin/part-3
 
 ## 1- More Conditionals
 
 > ### Learning objectives
 >***After this section***
+<<<<<<< HEAD
 > - You will know how to create multiple branches within conditional statements
 > - You will understand the purpose of <mark>if</mark>, <mark>elif</mark> and <mark>else</mark> 
 statements within a conditional statement
@@ -63,3 +68,18 @@ conditions
 > - You will be able to use a <mark>while True</mark> loop in your programs
 > - You will know how to use the <mark>break</mark> command to break out of a loop
 >>>>>>> origin/part-2
+=======
+> - You will know how to create a while loop with a condition
+> - You will know what roles initialisation, formulating a condition and updating variables 
+perform in a loop
+> - You will be able to create loops with different kinds of condition 
+
+## 2- Working with strings
+
+> ### Learning objectives
+>***After this section***
+> - You will know how to use the operations <mark>+</mark> and <mark>*</mark> with strings
+> - You will know how to find out the length of a string
+> - You will know what is meant by string indexing
+> - You will know how to look for substrings within a string
+>>>>>>> origin/part-3
