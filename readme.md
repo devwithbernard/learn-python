@@ -79,3 +79,10 @@
 > - You will know what is meant by string indexing
 > - You will know how to look for substrings within a string
 
+## 3- More loops
+
+> ### Learning objectives
+>***After this section***
+> - You will understand when the <mark>break</mark> command is needed to break out of loops
+> - You will be able to use the <mark>continue</mark> command to move to the next iteration
+> - You will understand how nested loops work
