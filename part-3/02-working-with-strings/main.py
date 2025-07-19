@@ -70,6 +70,13 @@ second character: {second_char}
 last character: {last_char}
 """)
 
+# TODO: Substrings and slices
+string = "presumptious"
+print(string[0:3])
+print(string[4:10])
+print(string[:3])
+print(string[4:])
+
 """
 Exercise
 """
