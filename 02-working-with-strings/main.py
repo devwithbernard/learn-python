@@ -41,6 +41,13 @@ while row < 5:
     print(space + stars)
     row += 1
 
+# TODO: The length and index of a string
+
+input_string = input("Please type in a string: ")
+print(input_string)
+print("length:", len(input_string))
+print("-" * len(input_string))
+
 """
 Exercise
 """
