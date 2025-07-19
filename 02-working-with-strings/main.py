@@ -124,5 +124,10 @@ if word and len(word) > 3:
 else:
     print("Word not valid")
 
+# TODO: Underlining
+string = input("Please, enter a text: ")
+underlining = "-" * len(string)
 
+print(string)
+print(underlining)
 
