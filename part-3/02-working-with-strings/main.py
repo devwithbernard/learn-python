@@ -173,3 +173,18 @@ right_white_space = " " * right_space
 print(row)
 print("*" + left_white_space + word + right_white_space + "*")
 print(row)
+
+# TODO: Substrings, part 1
+text = input("Please type in a string: ")
+
+if text:
+    for i in range(len(text)):
+        print(text[:i + 1])
+
+# TODO: Substrings, part 2
+"""
+We use the same entry as part 1
+"""
+if text:
+    for i in range(1, len(text) + 1):
+        print(text[len(text) - i:])
