@@ -140,3 +140,29 @@ else:
     star = "*" * (20 - len(string))
     print(star + string)
 
+# TODO: A framed word
+limit = None
+left_space = None
+right_space = None
+
+word = input("Word: ")
+
+if len(word) > limit:
+    limit = len(word) + 10
+else:
+    limit = 30
+
+row = "*" * limit
+
+if len(word) % 2 == 0:
+    left_space = right_space = (30 - len(word) - 2) // 2
+else:
+    left_space = (30 - len(word) - 2) // 2
+    right_space = (30 - len(word) - 2) // 2 + 1
+
+left_white_space = " " * left_space
+right_white_space = " " * right_space
+
+print(row)
+print("*" + left_white_space + word + right_white_space + "*")
+print(row)
