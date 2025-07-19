@@ -221,3 +221,27 @@ if word:
             print(f"{vowel} found")
         else:
             print(f"{vowel} not found")
+
+# TODO: Find the first substring
+word = None
+char = None
+
+while True:
+    word = input("Please type in a word: ")
+    char = input("Please type in a character: ")
+
+    if len(word) >= 3 and len(char) == 1:
+        break
+    else:
+        print("The word is to short")
+        print("The char must be a single character")
+
+found_index = word.find(char)
+if found_index >= 0:
+    if len(word[found_index:]) >= 3:
+        substring = word[found_index: found_index + 3]
+        print(substring)
+    else:
+        print("The returned substring is not valid")
+else:
+    print(f"'{char}' not in '{word}'")
