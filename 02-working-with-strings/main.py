@@ -99,3 +99,12 @@ if len(strings):
     print("The longest word of strings: ")
     print(f"word: {longest_word}\nlength: {len(longest_word)}")
 
+# TODO: End the beginning
+name = input("What is your name: ")
+index = 1
+print("Reversed name characters:")
+while len(name) - index >= 0:
+    print(name[-index], end=" ")
+    index += 1
+
+
