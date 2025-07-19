@@ -40,3 +40,13 @@ while row < 5:
     stars = "*" * (2 * row + 1)
     print(space + stars)
     row += 1
+
+"""
+Exercise
+"""
+
+# TODO: String multiplied
+string = input("Please type in a string: ")
+amount = int(input("Please type i an amount: "))
+
+print(string * amount)
