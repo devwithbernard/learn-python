@@ -48,6 +48,28 @@ print(input_string)
 print("length:", len(input_string))
 print("-" * len(input_string))
 
+# String index
+my_string = input("Enter a fruit: ")
+index = 0
+
+print(f"'{my_string}' characters: ")
+while index < len(my_string):
+    print(my_string[index])
+    index += 1
+
+name = "Konan"
+
+first_char = name[0]
+second_char = name[1]
+last_char = name[len(name) -1]
+
+print(f"""
+In '{name}':
+first character: {first_char}
+second character: {second_char}
+last character: {last_char}
+""")
+
 """
 Exercise
 """
