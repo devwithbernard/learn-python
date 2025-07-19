@@ -107,4 +107,22 @@ while len(name) - index >= 0:
     print(name[-index], end=" ")
     index += 1
 
+# TODO: Second and second to last characters
+word = input("Type in a word, please: ")
+
+if word and len(word) > 3:
+    second_char = word[1]
+    second_last_char = word[-2]
+
+    if second_char == second_last_char:
+        print("The second and the second to last characters are the same.")
+        print("Second character: ", second_char)
+    else:
+        print("The second and the second to last characters are different.")
+        print("Second character: ", second_char)
+        print("Second to last character: ", second_last_char)
+else:
+    print("Word not valid")
+
+
 
