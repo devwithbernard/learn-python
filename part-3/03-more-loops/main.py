@@ -36,3 +36,21 @@ while True:
     if sum_of_numbers >= 100:
         break
 print(f"The sum is {sum_of_numbers}")
+
+# TODO: The continue command
+positive_sum = 0
+
+while True:
+    number = int(input("Enter a positive number, -1 to exit: "))
+
+    if number == -1:
+        break
+
+    if number < 0 and number != -1:
+        print("Number not authorized!")
+        continue
+
+    positive_sum += number
+
+print(f"The sum of positive numbers is {positive_sum}")
+
