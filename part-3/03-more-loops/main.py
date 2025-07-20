@@ -24,3 +24,15 @@ while number != -1:
         sum_of_numbers += number
 
 print(f"The sum is {sum_of_numbers}")
+
+# TODO: Another version
+sum_of_numbers = 0
+while True:
+    number = int(input("Please type in a number, -1 to exit: "))
+
+    if number == -1:
+        break
+    sum_of_numbers += number
+    if sum_of_numbers >= 100:
+        break
+print(f"The sum is {sum_of_numbers}")
