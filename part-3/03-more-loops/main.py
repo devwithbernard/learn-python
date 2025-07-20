@@ -54,3 +54,12 @@ while True:
 
 print(f"The sum of positive numbers is {positive_sum}")
 
+# TODO: Nested loops
+number = int(input("Enter a number: "))
+while number > 0:
+    i = 0
+    while i < number:
+        print(f"{i}", end=" ")
+        i += 1
+    print()
+    number -= 1
