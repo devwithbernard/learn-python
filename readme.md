@@ -86,3 +86,11 @@
 > - You will understand when the <mark>break</mark> command is needed to break out of loops
 > - You will be able to use the <mark>continue</mark> command to move to the next iteration
 > - You will understand how nested loops work
+
+## 4- Defining functions
+
+> ### Learning objectives
+>***After this section***
+> - You will know how to write and call your own functions
+> - You will understand what is meant by the argument and the parameter of a function
+> - You will be able to define parameters in your own functions
