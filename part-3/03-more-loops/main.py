@@ -112,3 +112,15 @@ while i <= number:
         print(i + 1)
     print(i)
     i += 2
+
+# TODO: Taking turns
+number = int(input("Please type in a number: "))
+start = 1
+end = number
+
+while start <= end:
+    print(start)
+    if start != end:
+        print(end)
+    start += 1
+    end -= 1
