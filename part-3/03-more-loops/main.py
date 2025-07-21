@@ -86,3 +86,29 @@ while index < len(sentence):
         print(sentence[index + 1])
 
     index += 1
+
+# TODO: Factorial
+while True:
+    number = int(input("Please type in a number: "))
+
+    if number <= 0:
+        print("Thanks and bye!")
+        break
+
+    factorial = 1
+    i = number
+    while i >= 1:
+        factorial *= i
+        i -= 1
+
+    print(f"The factorial of the number {number} is {factorial}")
+
+# TODO: Flip the pairs
+number = int(input("Please type in a number: "))
+i = 1
+
+while i <= number:
+    if i + 1 <= number:
+        print(i + 1)
+    print(i)
+    i += 2
