@@ -76,3 +76,13 @@ while i <= number:
         j += 1
     i += 1
 
+# TODO: First letters of words
+sentence = input("Please type in a sentence: ").strip()
+index = 1
+
+print(sentence[0])
+while index < len(sentence):
+    if sentence[index].strip() == "":
+        print(sentence[index + 1])
+
+    index += 1
