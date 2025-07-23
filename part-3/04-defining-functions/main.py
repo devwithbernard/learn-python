@@ -118,3 +118,19 @@ def mean(*args) -> float:
 
 print(mean(5, 3, 1))
 print(mean(10, 1, 1))
+
+
+# TODO: Print many times
+def print_many_times(text, times) -> None:
+    if times < 0:
+        raise ValueError(f"'times' parameter must be a positive integer.")
+    elif times == 0:
+        print("")
+    else:
+        while times > 0:
+            print(text)
+            times -= 1
+
+
+string = "All Pythons, except one, grow up"
+print_many_times(string, 3)
