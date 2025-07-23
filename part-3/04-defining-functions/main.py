@@ -60,16 +60,28 @@ def get_students_per_class(students: list[dict[str, str, object]]) -> dict[str, 
     return classes
 
 
-def find_best_student_per_class(students: list) -> dict:
-    return max(students, key=lambda std: round(sum(std.get('notes')) / len(std.get('notes')), 2))
+def find_best_student_per_class(stds: list) -> dict:
+    return max(stds, key=lambda std: round(sum(std['notes']) / len(std['notes']), 2))
+
+
+def calculate_mean(notes: list[float]) -> float:
+    return round(sum(notes) / len(notes), 2)
+
+
+def format_student(student) -> str:
+    mean = calculate_mean(student['notes'])
+    notes_str = ', '.join([ str(note) for note in student['notes']])
+
+    return f"""
+    Name: {student['name']}
+    Notes: {notes_str}
+    mean: {mean}/20
+    """
 
 
 classes = get_students_per_class(students)
 
-
-for level, students in enumerate(classes):
+for level, students in classes.items():
     print(f"-------------- {level} ----------------")
-    print(find_best_student_per_class(students))
-
-
-
+    best_student = find_best_student_per_class(students)
+    print(format_student(best_student))
