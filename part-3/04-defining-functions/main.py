@@ -134,3 +134,19 @@ def print_many_times(text, times) -> None:
 
 string = "All Pythons, except one, grow up"
 print_many_times(string, 3)
+
+
+# TODO: A square of hashes
+def hash_square(length: int) -> None:
+    row = "#" * length
+    square = ""
+
+    while length > 0:
+        square += row + "\n"
+        length -= 1
+
+    print(square)
+
+
+hash_square(3)
+hash_square(5)
