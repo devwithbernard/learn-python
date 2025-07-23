@@ -79,7 +79,7 @@ def calculate_mean(notes: list[float]) -> float:
 
 def format_student(student) -> str:
     mean = calculate_mean(student['notes'])
-    notes_str = ', '.join([ str(note) for note in student['notes']])
+    notes_str = ', '.join([str(note) for note in student['notes']])
 
     return f"""
     Name: {student['name']}
@@ -106,3 +106,15 @@ targets = ['python', 'yellow', 'tomorrow', 'heliotrope', 'open', 'night']
 
 for target in targets:
     print(f"{target} => {first_character(target)}")
+
+
+# TODO: Mean
+def mean(*args) -> float:
+    if len(args) == 0 or args is None:
+        return 0
+    else:
+        return round(sum(args) / len(args), 2)
+
+
+print(mean(5, 3, 1))
+print(mean(10, 1, 1))
