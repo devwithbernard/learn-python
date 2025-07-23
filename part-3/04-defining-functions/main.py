@@ -6,6 +6,15 @@ def greeting():
 greeting()
 
 
+# TODO: Function arguments
+def hello(target):
+    print("Hello", target)
+
+
+hello("Emily")
+hello("World!")
+
+
 # Exercise
 # TODO: Seven Brothers
 def display_name(name: str) -> None:
