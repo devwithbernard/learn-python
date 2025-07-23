@@ -94,3 +94,15 @@ for level, students in classes.items():
     print(f"-------------- {level} ----------------")
     best_student = find_best_student_per_class(students)
     print(format_student(best_student))
+
+
+# TODO: The first character
+def first_character(text: str) -> None:
+    return text.strip()[0]
+
+
+# Testing the function
+targets = ['python', 'yellow', 'tomorrow', 'heliotrope', 'open', 'night']
+
+for target in targets:
+    print(f"{target} => {first_character(target)}")
