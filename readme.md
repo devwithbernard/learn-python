@@ -94,3 +94,13 @@
 > - You will know how to write and call your own functions
 > - You will understand what is meant by the argument and the parameter of a function
 > - You will be able to define parameters in your own functions
+
+
+# Learn Python: Part 4
+
+## 1- Debugger
+
+> ### Learning objectives
+>***After this section***
+> - You will know how to debug a program
+> - You will be able to view program execution process
