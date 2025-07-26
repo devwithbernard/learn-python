@@ -47,3 +47,38 @@ def box_of_hashes(height: int) -> None:
 box_of_hashes(5)
 print()
 box_of_hashes(2)
+
+
+# TODO: A square of hashes
+def square_of_hashes(width: int) -> None:
+    if width == 0:
+        print("")
+    else:
+        side: int = width
+        while width > 0:
+            print("#" * side)
+            width -= 1
+
+
+square_of_hashes(10)
+print()
+square_of_hashes(3)
+
+
+# TODO: A square
+def square(width: int, char: str) -> None:
+    if width <= 0:
+        return
+
+    if not isinstance(char, str) or len(char) != 1:
+        raise ValueError(f"'{char}' must be a single character")
+
+    line_str = char * width
+
+    for _ in range(width):
+        print(line_str)
+
+
+square(3, "*")
+print()
+square(5, "o")
