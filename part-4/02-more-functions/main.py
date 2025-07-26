@@ -230,3 +230,37 @@ def greatest_number(*args) -> float:
 
 
 print("The greatest numbers between 5, -2, 15, 18, 3 is ", greatest_number(5, -2, 15, 18, 3))
+
+
+# TODO: Same characters
+def same_char(string: str, first_index: int, second_index: int) -> bool:
+    """
+    Return True if the characters at the given indices in the string are the same (case-insensitive).
+
+    Args:
+        string (str): The input string.
+        first_index (int): The index of the first character.
+        second_index (int): The index of the second character.
+
+    Returns:
+        bool: True if the characters match (ignoring case), False otherwise or if indices are out of range.
+
+    Examples:
+        >>> same_char("programmer", 6, 7)
+        True
+        >>> same_char("Hello", 0, 1)
+        False
+        >>> same_char("Test", 0, 10)
+        False
+    """
+    if not string:
+        return False
+    if first_index < 0 or second_index < 0:
+        return False
+    if first_index >= len(string) or second_index >= len(string):
+        return False
+
+    return string[first_index].lower() == string[second_index].lower()
+
+
+print(same_char("programmer", 6, 7))
