@@ -203,3 +203,30 @@ def spruce(height: int, char: str) -> None:
 spruce(5, "*")
 print()
 spruce(3, "o")
+
+
+# TODO: The greatest numbers
+
+def greatest_number(*args) -> float:
+    """
+    Returns the greatest number among given arguments.
+
+    Args:
+        *args: One or more float or int to compare.
+
+    Returns:
+        float: The greatest numbers among the inputs.
+
+    Raises:
+        ValueError: If no arguments are provided.
+
+    Examples:
+        >>> greatest_number(4, 5, 8, 2)
+        8
+    """
+    if not args:
+        raise ValueError("A least one number must be provided.")
+    return max(args)
+
+
+print("The greatest numbers between 5, -2, 15, 18, 3 is ", greatest_number(5, -2, 15, 18, 3))
