@@ -82,3 +82,17 @@ def square(width: int, char: str) -> None:
 square(3, "*")
 print()
 square(5, "o")
+
+
+# TODO: A triangle
+def triangle(wide: int) -> None:
+    if wide == 0:
+        return
+
+    i = 1
+    while i <= wide:
+        line(i, "*")
+        i += 1
+
+
+triangle(5)
