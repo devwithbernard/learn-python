@@ -96,3 +96,35 @@ def triangle(wide: int) -> None:
 
 
 triangle(5)
+
+
+# TODO: A spruce
+def spruce(height: int, char: str) -> None:
+    if height <= 0:
+        return
+
+    if not isinstance(char, str) or len(char) != 1:
+        raise ValueError("The char must a single character.")
+
+    end_line = 0
+    first_line = ""
+
+    for i in range(1, height + 1):
+        end_line += 1
+
+        space = " " * (height - i)
+        block = char * (2 * i - 1)
+        lines = space + block + space
+
+        print(lines)
+
+        if end_line == 1:
+            first_line = lines
+
+        if end_line == height:
+            print(first_line)
+
+
+spruce(5, "*")
+print()
+spruce(3, "o")
