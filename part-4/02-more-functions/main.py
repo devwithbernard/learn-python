@@ -29,6 +29,67 @@ def greet_many_times(name: str, times: int) -> None:
 
 greet_many_times("Konan Bernard", 3)
 
+
+# TODO: The return value of a function
+def ask_name() -> str:
+    name = input("What's your name? ")
+    if not name:
+        raise ValueError('name not valid.')
+    return name
+
+
+my_name = ask_name()
+print(f"My name is {my_name}.")
+
+
+def smallest(numbers: list[float]) -> float | None:
+    """
+    Returns the smallest number in a list of floats.
+    If the input is empty, return None.
+
+    Args:
+        numbers (list[float]): a list of floats
+
+    Returns:
+        float or None: the smallest float in the input list, or None if the list is empty
+
+    Examples:
+        >>> smallest([3.5, 2.1, 5.0])
+        2.1
+
+        >>> smallest([])
+        None
+    """
+    if numbers is None:
+        return None
+
+    minimum = numbers[0]
+    for num in numbers[1:]:
+        if num < minimum:
+            minimum = num
+
+    return minimum
+
+
+print(f"The smallest numbers in '{[8, 5, -1, 6, 2]}' is {smallest([8, 5, -1, 6, 2])}")
+
+
+def my_diff(a: float, b: float) -> float:
+    """
+    Returns the subtraction between a and b
+    :param a: the first float
+    :rtype: float
+    :param b: the second float
+    :rtype: float
+    :return: the subtraction of a and b
+
+    Examples:
+        >>> my_diff(5, 2)
+        3.0
+    """
+    return a - b
+
+
 """
 Exercises
 """
