@@ -31,3 +31,19 @@ def line(length: int, string: str) -> None:
 line(5, "%")
 line(7, "")
 line(8, "Line")
+
+
+# TODO: A box of hashes
+def box_of_hashes(height: int) -> None:
+    if height == 0:
+        print("")
+    else:
+        width: int = 10
+        while height > 0:
+            print("#" * width)
+            height -= 1
+
+
+box_of_hashes(5)
+print()
+box_of_hashes(2)
