@@ -104,3 +104,11 @@
 >***After this section***
 > - You will know how to debug a program
 > - You will be able to view program execution process
+
+## 2- More functions
+
+> ### Learning objectives
+>***After this section***
+> - You will know more about the arguments and parameters of functions
+> - You will know how to return values from functions, and how to use the values in your code
+> - You will be able to add type hints for parameters and returns values
