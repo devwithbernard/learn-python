@@ -112,3 +112,12 @@
 > - You will know more about the arguments and parameters of functions
 > - You will know how to return values from functions, and how to use the values in your code
 > - You will be able to add type hints for parameters and returns values
+
+## 3- Lists
+
+> ### Learning objectives
+>***After this section***
+> - You will know what lists are in Python
+> - You will be able to access a specified item within a list
+> - You will know how to add items to a list, and how to remove them
+> - You will be familiar with the built-in list functions and methods
