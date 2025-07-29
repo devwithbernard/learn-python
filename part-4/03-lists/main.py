@@ -95,6 +95,15 @@ while True:
         print("End")
         break
 
+# TODO: Sorting lists
+nums: list[int] = [1, 5, 3, 4, 2]
+
+nums.sort()
+print("Sorted list: ", nums)
+
+sorted_list: list[int] = sorted(nums)
+print("New sorted list: ", sorted_list)
+
 """
 Exercises
 """
