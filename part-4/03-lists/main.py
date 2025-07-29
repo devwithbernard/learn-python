@@ -208,3 +208,16 @@ while True:
         break
     else:
         words.append(word)
+
+# TODO: List twice
+items: list[int] = []
+
+while True:
+    new_item: int = int(input("New item (O to end): "))
+
+    if new_item == 0:
+        break
+
+    items.append(new_item)
+    new_items = sorted(items)
+    print("The list now:", new_items)
