@@ -65,6 +65,36 @@ while True:
         coord = (x, y)
         points.insert(index, coord)
 
+# TODO: Removing items from a list
+names: list[str] = ["Sophia", "Luigi", "Mark", "Simon"]
+indexes: list[int] = [i for i in range(5)]
+
+while len(indexes) > 0:
+    index: int = int(input("Removing index (-1 to end): "))
+
+    if not (0 <= index < len(indexes)):
+        print(f"Index out of range (They are {len(indexes)}\nRetry!")
+    else:
+        removed_item: int = indexes.pop(index)
+        print(f"{removed_item} at index {index}")
+
+    if len(indexes) == 0:
+        print("Empty list\nEnd!")
+
+print("Following names: ", ", ".join(names))
+while True:
+    name: str = input("Remove a name (or 'end' to end): ").strip()
+
+    if name.capitalize() not in names:
+        print(f"'{name}' not in list of names")
+    else:
+        names.remove(name)
+        print(f"'{name}' removed to names.")
+
+    if len(names) == 0 or name.lower() == 'end':
+        print("End")
+        break
+
 """
 Exercises
 """
