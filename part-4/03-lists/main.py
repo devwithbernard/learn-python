@@ -28,6 +28,25 @@ print("-" * 15)
 for fruit in fruits:
     print(f"{fruit[:-1]} => {fruit[-1]}")
 
+# TODO: Adding item to a list
+shoe_sizes: list[int] = []
+
+shoes_number: int = 3
+
+while shoes_number > 0:
+    shoe_size: int = int(input("Shoe size: "))
+
+    if 20 <= shoe_size <= 50:
+        shoe_sizes.append(shoe_size)
+        shoes_number -= 1
+    else:
+        print("Shoe size must be between 20 and 50")
+        print("Retry!")
+
+    if shoes_number == 0:
+        print("Shoe sizes: ", shoe_sizes)
+
+
 """
 Exercises
 """
