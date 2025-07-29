@@ -186,3 +186,16 @@ while True:
         print(data)
     else:
         print("Bad choice!")
+
+# TODO: Same word twice
+words: list[str] = []
+while True:
+    word: str = input("Word: ")
+
+    if not word.strip():
+        print("Empty word not authorized!")
+    if word in words:
+        print(f"You typed in {len(words)} different words")
+        break
+    else:
+        words.append(word)
