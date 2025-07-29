@@ -48,3 +48,19 @@ while True:
         print("Index out of list indexes")
 
     print(numbers)
+
+# TODO: Add items to a list
+adding_times: int = int(input("How many times: "))
+
+items: list[int] = []
+current: int = 1
+
+while adding_times > 0:
+    item = int(input(f"Item {current}: "))
+    items.append(item)
+
+    adding_times -= 1
+    current += 1
+
+    if adding_times == 0:
+        print("Items:", items)
