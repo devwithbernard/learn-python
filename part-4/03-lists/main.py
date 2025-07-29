@@ -115,6 +115,17 @@ print("The smallest number: ", smallest_num)
 print("The largest number: ", largest_num)
 print("The sum of numbers: ", sum_of_nums)
 
+
+# TODO: Median
+def median(numbers: list[float]) -> float:
+    ordered_numbers = sorted(numbers)
+    centered_index = len(numbers) // 2
+    return ordered_numbers[centered_index]
+
+
+print(f"The median of {nums} is {median(nums)}")
+
+
 """
 Exercises
 """
