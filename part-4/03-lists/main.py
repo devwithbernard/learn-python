@@ -125,7 +125,6 @@ def median(numbers: list[float]) -> float:
 
 print(f"The median of {nums} is {median(nums)}")
 
-
 """
 Exercises
 """
@@ -243,3 +242,13 @@ while True:
     items.append(new_item)
     new_items = sorted(items)
     print("The list now:", new_items)
+
+
+# TODO: The range of a list
+def range_of_list(data: list[int]) -> int:
+    if data:
+        return max(data) - min(data)
+
+
+my_list = [1, 2, 5, 4, 3, 8]
+print("The range of a list is", range_of_list(my_list))
