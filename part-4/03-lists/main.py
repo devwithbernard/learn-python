@@ -104,6 +104,17 @@ print("Sorted list: ", nums)
 sorted_list: list[int] = sorted(nums)
 print("New sorted list: ", sorted_list)
 
+# TODO: Maximum, Minimum and Sum
+nums: list[int] = [2, 5, 6, 1, 0, 4, 10]
+
+smallest_num: int = min(nums)
+largest_num: int = max(nums)
+sum_of_nums: int = sum(nums)
+
+print("The smallest number: ", smallest_num)
+print("The largest number: ", largest_num)
+print("The sum of numbers: ", sum_of_nums)
+
 """
 Exercises
 """
