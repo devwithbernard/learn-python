@@ -131,3 +131,58 @@ while adding_times > 0:
 
     if adding_times == 0:
         print("Items:", items)
+
+
+# TODO: Addition and removal
+def add(item: int, items: list[int]) -> list[int]:
+    """
+        Appends an item to the list and returns the updated list.
+
+        Args:
+            item (int): The integer to add to the list.
+            items (list[int]): The list to which the item will be added.
+
+        Returns:
+            list[int]: The updated list containing the added item.
+    """
+    items.append(item)
+    return items
+
+
+def remove(items: list[int]) -> list[int]:
+    """
+        Removes the last item from the list if it is not empty.
+        If the list is empty, a message is printed and the list remains unchanged.
+        Finally, return the updated or unchanged list.
+
+        Args:
+            items (list[int]): The list from which the last item will be removed.
+
+        Returns:
+            list[int]: The updated list after attempting to remove the last item.
+    """
+    if not items:
+        print("Empty list. Impossible to remove an item.")
+    else:
+        items.pop(len(items) - 1)
+
+    return items
+
+
+data: list[int] = []
+
+while True:
+    choice: str = input("A(d)d or (r)emove or e(x)it: ").strip().lower()
+
+    if choice == 'x':
+        print("Bye!")
+        break
+    elif choice == 'r':
+        data = remove(data)
+        print(data)
+    elif choice == 'd':
+        item = int(input("Added item: "))
+        data = add(item, data)
+        print(data)
+    else:
+        print("Bad choice!")
