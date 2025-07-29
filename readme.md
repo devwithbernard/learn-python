@@ -121,3 +121,11 @@
 > - You will be able to access a specified item within a list
 > - You will know how to add items to a list, and how to remove them
 > - You will be familiar with the built-in list functions and methods
+
+## 4- Definite iteration
+
+> ### Learning objectives
+>***After this section***
+> - You will know the difference between definite and indefinite iteration
+> - You will know how a Python <mark>for</mark> loop works
+> - You will be able to use a <mark>for</mark> loop to iterate through lists and strings
