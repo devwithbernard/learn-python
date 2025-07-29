@@ -46,6 +46,24 @@ while shoes_number > 0:
     if shoes_number == 0:
         print("Shoe sizes: ", shoe_sizes)
 
+# TODO: Adding to a specific index
+points: list[tuple[float, float]] = [(0.0, 0.0), (3.2, 5.3), (1.5, 1.75)]
+
+while True:
+    index: int = int(input("Specific index (-1 to end): "))
+    if index == -1:
+        print("Points:", points)
+        break
+
+    if not (0 <= index < len(points)):
+        print("Index out of range!")
+        print(f"Retry!\nLength of coordinates: {len(points)}")
+    else:
+        x: float = float(input("X = "))
+        y: float = float(input("Y = "))
+
+        coord = (x, y)
+        points.insert(index, coord)
 
 """
 Exercises
