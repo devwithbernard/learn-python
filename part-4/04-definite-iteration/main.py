@@ -10,3 +10,9 @@ index: int = 0
 while index < len(numbers):
     print(numbers[index])
     index += 1
+
+# TODO: for loop
+names: tuple[str, ...] = ("Jack", "Luigi", "Marc")
+
+for name in names:
+    print(name)
