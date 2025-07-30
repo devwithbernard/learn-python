@@ -16,3 +16,43 @@ names: tuple[str, ...] = ("Jack", "Luigi", "Marc")
 
 for name in names:
     print(name)
+
+"""
+Exercises
+"""
+
+
+# TODO: Star-studded
+def star_studded(text: str) -> None:
+    if text:
+        for char in text:
+            print(char)
+            print("*")
+
+
+string: str = input("Please, Enter a string: ")
+star_studded(string)
+
+# TODO: Prime number
+
+
+def is_prime(number: int) -> bool:
+    if number < 2:
+        return False
+
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+
+    return True
+
+
+prime_numbers: list[int] = []
+
+for i in range(2, 100):
+    if is_prime(i):
+        prime_numbers.append(i)
+
+print("Prime numbers between 0 and 100 are: ")
+for prime_number in prime_numbers:
+    print(prime_number, end=" ")
