@@ -40,6 +40,7 @@ def star_studded(text: str) -> None:
 string: str = input("Please, Enter a string: ")
 star_studded(string)
 
+
 # TODO: Prime number
 
 
@@ -105,3 +106,28 @@ def list_of_stars(star_counts: list[int], star: str) -> None:
 
 num_stars: list[int] = [3, 7, 1, 1, 2]
 list_of_stars(num_stars, "*")
+
+
+# TODO: Anagrams
+def anagrams(string1: str, string2: str) -> bool:
+    """
+        Checks whether two strings are anagrams of each other.
+
+        An anagram is formed by rearranging the letters of a word or phrase 
+        to produce a new word or phrase, using all the original letters exactly once.
+
+        Args:
+            string1 (str): The first string to compare.
+            string2 (str): The second string to compare.
+
+        Returns:
+            bool: True if the strings are anagrams, False otherwise.
+    """
+    return sorted(string1) == sorted(string2)
+
+
+print(anagrams("tame", "meta"))  # True
+print(anagrams("tame", "mate"))  # True
+print(anagrams("tame", "team"))  # True
+print(anagrams("tabby", "batty"))  # False
+print(anagrams("python", "java"))  # False
