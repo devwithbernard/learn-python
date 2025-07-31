@@ -166,3 +166,18 @@ def main() -> None:
 
 
 main()
+
+
+# TODO: Sum of positive numbers
+def sum_of_positives(numbers: list[float]) -> float:
+    sum_of_numbers = 0
+
+    for number in numbers:
+        if number > 0:
+            sum_of_numbers += number
+
+    return sum_of_numbers
+
+
+result = sum_of_positives([1, -2, 3, -4, 5])
+print(f"The result is {result}")
