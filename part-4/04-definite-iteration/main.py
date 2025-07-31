@@ -256,3 +256,27 @@ print(result)
 my_list = ["adele", "mark", "dorothy", "tim", "hedy", "richard"]
 result = length_of_longest(my_list)
 print(result)
+
+
+# TODO: The shortest in the list
+
+def shortest(strings: list[str]) -> str:
+    shortest_word = strings[0]
+
+    for i in range(1, len(strings)):
+        curr_string = strings[i]
+
+        if len(curr_string) < len(shortest_word):
+            shortest_word = curr_string
+
+    return shortest_word
+
+
+my_list = ["first", "second", "fourth", "eleventh"]
+result = shortest(my_list)
+print(result)
+
+
+my_list = ["adele", "mark", "dorothy", "tim", "hedy", "richard"]
+result = shortest(my_list)
+print(result)
