@@ -181,3 +181,21 @@ def sum_of_positives(numbers: list[float]) -> float:
 
 result = sum_of_positives([1, -2, 3, -4, 5])
 print(f"The result is {result}")
+
+
+# TODO:
+
+def even_numbers(numbers: list[int]) -> list[int]:
+    even_numbers: list[int] = []
+
+    for number in numbers:
+        if number % 2 == 0:
+            even_numbers.append(number)
+
+    return even_numbers
+
+
+my_list = [1, 2, 3, 4, 5]
+new_list = even_numbers(my_list)
+print("original", my_list)
+print("new", new_list)
