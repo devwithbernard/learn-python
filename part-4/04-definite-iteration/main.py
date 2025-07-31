@@ -17,6 +17,13 @@ names: tuple[str, ...] = ("Jack", "Luigi", "Marc")
 for name in names:
     print(name)
 
+# TODO: From range to list
+nums: range = range(2, 10)
+print(nums)
+
+nums_list: list[int] = list(nums)
+print(nums_list)
+
 """
 Exercises
 """
