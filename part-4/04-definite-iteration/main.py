@@ -131,3 +131,38 @@ print(anagrams("tame", "mate"))  # True
 print(anagrams("tame", "team"))  # True
 print(anagrams("tabby", "batty"))  # False
 print(anagrams("python", "java"))  # False
+
+
+# TODO: Palindromes
+def palindromes(string: str) -> bool:
+    """
+    Checks whether a given string is a palindrome.
+
+    A palindrome is a word, phrase, or sequence that reads the same
+    backward as forward.
+
+    Args:
+        string (str): The string to check.
+
+    Raises:
+        ValueError: If the input string is empty.
+
+    Returns:
+        bool: True if the string is a palindrome, False otherwise.
+    """
+    if string == "":
+        raise ValueError("string is empty.")
+
+    return string == string[::-1]
+
+
+def main() -> None:
+    string = input("Please type in a palindrome: ")
+
+    if palindromes(string):
+        print(f"'{string}' is a palindrome.")
+    else:
+        print(f"'{string}' is not a palindrome.")
+
+
+main()
