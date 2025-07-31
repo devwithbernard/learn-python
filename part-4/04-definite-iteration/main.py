@@ -56,3 +56,15 @@ for i in range(2, 100):
 print("Prime numbers between 0 and 100 are: ")
 for prime_number in prime_numbers:
     print(prime_number, end=" ")
+
+# TODO: From negative to positive
+number: int = abs(int(input("Please enter a number: ")))
+
+if number == 0:
+    print("Not authorized")
+else:
+    for i in range(-number, number + 1):
+        if i == 0:
+            continue
+        else:
+            print(i)
