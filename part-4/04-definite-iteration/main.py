@@ -216,3 +216,20 @@ def list_sum(list1: list[int], list2: list[int]) -> list[int]:
 a = [1, 2, 3]
 b = [7, 8, 9]
 print(list_sum(a, b))
+
+
+# TODO: Distinct numbers
+
+def distinct_numbers(numbers: list[int]) -> None:
+    distinct_numbers: list[int] = []
+    sorted_numbers: list[int] = sorted(numbers)
+
+    for i in sorted_numbers:
+        if i not in distinct_numbers:
+            distinct_numbers.append(i)
+
+    return distinct_numbers
+
+
+my_list = [3, 2, 2, 1, 3, 3, 1]
+print(distinct_numbers(my_list))
