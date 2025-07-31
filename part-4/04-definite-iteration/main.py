@@ -75,3 +75,33 @@ else:
             continue
         else:
             print(i)
+
+
+# TODO: List of stars
+
+def list_of_stars(star_counts: list[int], star: str) -> None:
+    """
+    Prints lines of stars based on the values in the star_counts list.
+
+    Each line printed corresponds to one integer in star_counts, and contains
+    that many repetitions of the given star character.
+
+    Args:
+        star_counts (list[int]): A list of integers representing the number of stars to print per line.
+        star (str): A single character string used as the star symbol.
+
+    Raises:
+        ValueError: If the 'star' argument is not a single character.
+
+    Returns:
+        None
+    """
+    if len(star) > 1:
+        raise ValueError("'star' must be a single character.")
+
+    for star_count in star_counts:
+        print(star * star_count)
+
+
+num_stars: list[int] = [3, 7, 1, 1, 2]
+list_of_stars(num_stars, "*")
