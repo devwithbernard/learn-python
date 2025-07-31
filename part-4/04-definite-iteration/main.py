@@ -199,3 +199,20 @@ my_list = [1, 2, 3, 4, 5]
 new_list = even_numbers(my_list)
 print("original", my_list)
 print("new", new_list)
+
+
+# TODO: The sum of lists
+
+def list_sum(list1: list[int], list2: list[int]) -> list[int]:
+    new_lists: list[int] = []
+
+    if len(list1) == len(list2):
+        for i in range(len(list1)):
+            sum_of_items: int = list1[i] + list2[i]
+            new_lists.append(sum_of_items)
+    return new_lists
+
+
+a = [1, 2, 3]
+b = [7, 8, 9]
+print(list_sum(a, b))
