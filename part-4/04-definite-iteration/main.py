@@ -233,3 +233,26 @@ def distinct_numbers(numbers: list[int]) -> None:
 
 my_list = [3, 2, 2, 1, 3, 3, 1]
 print(distinct_numbers(my_list))
+
+
+# TODO: The length of the longest in the list
+
+def length_of_longest(strings: list[str]) -> int:
+    longest_lenght = len(strings[0])
+
+    for i in range(1, len(strings)):
+        curr_string = strings[i]
+
+        if len(curr_string) > longest_lenght:
+            longest_lenght = len(curr_string)
+
+    return longest_lenght
+
+
+my_list = ["first", "second", "fourth", "eleventh"]
+result = length_of_longest(my_list)
+print(result)
+
+my_list = ["adele", "mark", "dorothy", "tim", "hedy", "richard"]
+result = length_of_longest(my_list)
+print(result)
