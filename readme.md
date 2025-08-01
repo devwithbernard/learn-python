@@ -129,3 +129,11 @@
 > - You will know the difference between definite and indefinite iteration
 > - You will know how a Python <mark>for</mark> loop works
 > - You will be able to use a <mark>for</mark> loop to iterate through lists and strings
+
+## 5- More strings and lists
+
+> ### Learning objectives
+>***After this section***
+> - You will be familiar with more methods for slicing strings and lists
+> - You will understand what immutability of strings means
+> - You will be able to use the methods <mark>count</mark> and <mark>replace</mark>
