@@ -24,6 +24,15 @@ string: str = input("Please type in a string: ")
 reversed_string: str = string[::-1]
 print(reversed_string)
 
+# More methods for lists and strings
+my_string = "How much wood would a woodchuck chuck if a woodchuck could chuck wood"
+print(my_string.count('ch'))
+
+my_list = [1, 2, 3, 1, 4, 5, 1, 6]
+print(my_list.count(1))
+
+message = "Hi there!"
+print(message.replace("Hi", "Hello"))
 """
 Exercises
 """
@@ -60,4 +69,3 @@ def everything_reversed(strings: list[str]) -> list[str]:
 new_my_lists: list[str] = ["Hi", "there", "example", "one more"]
 reversed_lists: list[str] = everything_reversed(new_my_lists)
 print(reversed_lists)
-
