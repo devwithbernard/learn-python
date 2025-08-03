@@ -69,3 +69,43 @@ def everything_reversed(strings: list[str]) -> list[str]:
 new_my_lists: list[str] = ["Hi", "there", "example", "one more"]
 reversed_lists: list[str] = everything_reversed(new_my_lists)
 print(reversed_lists)
+
+
+# TODO: Most common character
+def most_common_character(string: str) -> str:
+    """
+        Returns the character that appears most frequently in the given string.
+        If multiple characters have the same highest frequency, the one that appears
+        first in the string is returned.
+
+        Args:
+            string (str): The input string.
+
+        Returns:
+            str: The most common character.
+    """
+
+    char_counts = {}
+
+    for char in string:
+        if char not in char_counts:
+            char_counts[char] = 1
+        else:
+            char_counts[char] += 1
+
+    result_char = ''
+    max_count = -1
+
+    for char in string:
+        if char_counts[char] > max_count:
+            max_count = char_counts[char]
+            result_char = char
+
+    return result_char
+
+
+first_string = "abcdbde"
+print(most_common_character(first_string))
+
+second_string = "exemplaryelementary"
+print(most_common_character(second_string))
