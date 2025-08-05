@@ -109,3 +109,43 @@ print(most_common_character(first_string))
 
 second_string = "exemplaryelementary"
 print(most_common_character(second_string))
+
+# TODO: No vowels allowed
+
+
+def no_vowels(string: str) -> str:
+    """
+    Remove all vowels from a string.
+
+    This function removes all vowels (a, e, i, o, u, y) from the input string,
+    treating both uppercase and lowercase letters as vowels. The original
+    case of non-vowel characters is preserved in the output.
+
+    Args:
+        string (str): The input string from which to remove vowels.
+
+    Returns:
+        str: A new string with all vowels removed.
+
+    Examples:
+        >>> no_vowels("Hello World")
+        'hll wrld'
+        >>> no_vowels("Python Programming")
+        'pthn prgrmmng'
+        >>> no_vowels("AEIOU")
+        ''
+        >>> no_vowels("bcdfg")
+        'bcdfg'
+    """
+    vowels: tuple[str, ...] = ('a', 'e', 'i', 'o', 'u', 'y')
+    new_string: str = string.lower()
+
+    for vowel in vowels:
+        if vowel in new_string:
+            new_string = new_string.replace(vowel, '')
+
+    return new_string
+
+
+my_string = "this is an example"
+print(no_vowels(my_string))
