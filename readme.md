@@ -137,3 +137,14 @@
 > - You will be familiar with more methods for slicing strings and lists
 > - You will understand what immutability of strings means
 > - You will be able to use the methods <mark>count</mark> and <mark>replace</mark>
+
+
+# Learn Python: Part 5
+
+## 1- More Lists
+
+> ### Learning objectives
+>***After this section***
+> - You will be able to create lists with different types of items
+> - You will know how to use lists to organise data
+> - You will be able to store a matrix as a two-dimensional list
