@@ -1,6 +1,7 @@
 """
 Learn more list features
 """
+from turtledemo.sorting_animate import enable_keys
 
 
 # TODO: Reversed list
@@ -201,3 +202,16 @@ def longest_string(strings: list[str]) -> str:
 
 my_strings = ["hi", "hiya", "hello", "howdydoody", "hi there"]
 print(longest_string(my_strings))
+
+# TODO: Number of matching elements
+
+def count_matching_elements(my_matrix: list[list[int]], element: int) -> int:
+    total_count = 0
+
+    for row in my_matrix:
+        total_count += row.count(element)
+
+    return total_count
+
+m = [[1, 2, 1], [0, 3, 4], [1, 0, 0]]
+print(count_matching_elements(m, 1))
