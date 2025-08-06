@@ -150,7 +150,7 @@
 > - You will be able to store a matrix as a two-dimensional list
 
 
-## 2- Dictionaries
+## 2- More Lists
 
 > ### Learning objectives
 >***After this section***
