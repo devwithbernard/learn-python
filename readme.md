@@ -148,3 +148,12 @@
 > - You will be able to create lists with different types of items
 > - You will know how to use lists to organise data
 > - You will be able to store a matrix as a two-dimensional list
+
+
+## 2- More Lists
+
+> ### Learning objectives
+>***After this section***
+> - You will be familiar with the dictionary data structure
+> - You will be able to use a dictionary with different types of keys and values
+> - You will be able to name some typical use cases for dictionaries
