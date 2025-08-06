@@ -57,6 +57,26 @@ def unique_numbers(numbers: list[int]) -> list[int]:
 numbers = [1, 2, 2, 3, 9, 9, 8, 10]
 print(unique_numbers(numbers))
 
+# TODO: Lists within lists
+
+my_list = [[1, 2, 3], [4, 1], [2, 2, 5, 1]]
+
+print(my_list)
+print(my_list[1])
+print(my_list[0][2])
+
+# Database of persons
+
+persons: list[list[str | int | float]] = [["Betty", 10, 1.37], ["Peter", 7, 1.25], ["Emily", 32, 1.64],
+                                          ["Alan", 39, 1.78]]
+
+for person in persons:
+    name: str = person[0]
+    age: int = person[1]
+    height: float = person[2]
+
+    print(f"{name}: age {age} years old, height {height} meters.")
+
 """
 Exercises
 """
