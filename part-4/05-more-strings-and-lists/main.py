@@ -110,6 +110,7 @@ print(most_common_character(first_string))
 second_string = "exemplaryelementary"
 print(most_common_character(second_string))
 
+
 # TODO: No vowels allowed
 
 
@@ -149,3 +150,92 @@ def no_vowels(string: str) -> str:
 
 my_string = "this is an example"
 print(no_vowels(my_string))
+
+
+# TODO: Grade statistics
+def grade(note: float) -> float:
+    match note:
+        case note if note <= 14:
+            return 0
+        case note if note <= 17:
+            return 1
+        case note if note <= 20:
+            return 2
+        case note if note <= 23:
+            return 3
+        case note if note <= 27:
+            return 4
+        case note if note <= 30:
+            return 5
+        case _:
+            return 0
+
+
+def exercise_point(point: float):
+    match point:
+        case point if point < 10:
+            return 0
+        case point if point < 20:
+            return 1
+        case point if point < 30:
+            return 2
+        case point if point < 40:
+            return 3
+        case point if point < 50:
+            return 4
+        case point if point < 60:
+            return 5
+        case point if point < 70:
+            return 6
+        case point if point < 80:
+            return 7
+        case point if point < 90:
+            return 8
+        case point if point < 100:
+            return 9
+        case point if point == 100:
+            return 10
+        case _:
+            return 0
+
+
+def result(cumul_pts: list[float]) -> None:
+    grades = [grade(pt) for pt in cumul_pts]
+
+    print('Grade distribution: ')
+
+    row = 5
+    while row >= 0:
+        print(f"{row}: {"*" * grades.count(row)}")
+        row -= 1
+
+
+def cumulate_points(points: list[tuple[int, ...]]) -> list[float] | None:
+    cumulate_pts = []
+    if not points:
+        return
+
+    for exam_pt, ex_pt in points:
+        cumulate_pts.append(exam_pt + exercise_point(ex_pt))
+
+    return cumulate_pts
+
+
+def entry() -> None:
+    exam_exercise_pts = []
+
+    while True:
+        user_input = input("Exam points and exercises completed: ").strip()
+
+        if user_input == "":
+            break
+
+        exam_exercise_pt = tuple([int(item) for item in user_input.split(" ")])
+        exam_exercise_pts.append(exam_exercise_pt)
+
+    cuml_pts = cumulate_points(exam_exercise_pts)
+
+    result(cuml_pts)
+
+
+entry()
