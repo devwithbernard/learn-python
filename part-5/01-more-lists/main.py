@@ -1,7 +1,6 @@
 """
 Learn more list features
 """
-from turtledemo.sorting_animate import enable_keys
 
 
 # TODO: Reversed list
@@ -203,6 +202,7 @@ def longest_string(strings: list[str]) -> str:
 my_strings = ["hi", "hiya", "hello", "howdydoody", "hi there"]
 print(longest_string(my_strings))
 
+
 # TODO: Number of matching elements
 
 def count_matching_elements(my_matrix: list[list[int]], element: int) -> int:
@@ -213,5 +213,57 @@ def count_matching_elements(my_matrix: list[list[int]], element: int) -> int:
 
     return total_count
 
+
 m = [[1, 2, 1], [0, 3, 4], [1, 0, 0]]
 print(count_matching_elements(m, 1))
+
+# TODO: Go
+from random import choice
+
+
+def generate_game_board(row: int, col: int) -> list[list[int]]:
+    new_list = []
+
+    for i in range(row):
+        new_row = []
+        for j in range(col):
+            new_row.append(choice([0, 1, 2]))
+        new_list.append(new_row)
+
+    return new_list
+
+
+def count_values(matrix: list[list[int]]) -> dict[str, int]:
+    one_total = 0
+    two_total = 0
+
+    for row in matrix:
+        one_total += row.count(1)
+        two_total += row.count(2)
+
+    return {
+        "1": one_total,
+        "2": two_total
+    }
+
+
+def who_won(game_board: list[list[int]]) -> int:
+    count_val = count_values(game_board)
+
+    if count_val.get("1") > count_val.get("2"):
+        return 1
+    elif count_val.get("1") < count_val.get("2"):
+        return 2
+    return 0
+
+
+game_board = generate_game_board(8, 8)
+
+winner = who_won(game_board)
+
+if winner == 1:
+    print("The player 1 won")
+elif winner == 2:
+    print("The player 2 won")
+elif winner == 0:
+    print("Both players have the same number of pieces")
