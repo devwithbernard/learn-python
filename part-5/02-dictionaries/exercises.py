@@ -46,3 +46,26 @@ k = factorials(5)
 print(k[1])
 print(k[3])
 print(k[5])
+
+
+# TODO: Histogram
+def histogram(string: str) -> None:
+    def count(string: str) -> dict[str, int]:
+        char_counts: dict[str, int] = {}
+
+        for char in string:
+            if char not in char_counts:
+                char_counts[char] = 0
+            char_counts[char] += 1
+
+        return char_counts
+
+    char_counts: dict[str, int] = count(string)
+
+    for char, count in char_counts.items():
+        print(char, "*" * count)
+
+
+histogram("abba")
+print()
+histogram("statistically")
