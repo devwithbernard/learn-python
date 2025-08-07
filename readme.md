@@ -157,3 +157,12 @@
 > - You will be familiar with the dictionary data structure
 > - You will be able to use a dictionary with different types of keys and values
 > - You will be able to name some typical use cases for dictionaries
+
+
+## 3- Tuple
+
+> ### Learning objectives
+>***After this section***
+> - You will be familiar with the tuple data type
+> - You will be able to create tuples from various types of values
+> - You will be able to name some typical use cases for tuples
