@@ -69,3 +69,96 @@ def histogram(string: str) -> None:
 histogram("abba")
 print()
 histogram("statistically")
+
+# TODO: Phone book
+
+phone_books: list[dict[str, str]] = {}
+
+
+def search(name: str, books: list[dict[str, str]]) -> dict[str, str] | None:
+    name_lower = name.lower()
+
+    for item in books:
+        item_name = item.get('name', '').lower()
+        if item_name == name_lower:
+            return item
+
+    return None
+
+
+def add(name: str, phone: str, books: list[dict[str, str]]) -> list[dict[str, str]]:
+    found_contact = search(name, books)
+
+    if found_contact:
+        # Contact exists - check if phone is different
+        if found_contact['phone'].lower() != phone.lower():
+            # Add new entry with same name but different phone
+            new_contact = {"name": name.lower(), "phone": phone}
+            books.append(new_contact)
+        else:
+            # Exact match already exists
+            print(f"The contact with name: {name} and phone: {phone} already exists.")
+    else:
+        # Contact doesn't exist - add new contact
+        new_contact = {"name": name.lower(), "phone": phone}
+        books.append(new_contact)
+
+    return books
+
+
+def ask_name_phone() -> tuple[str, str]:
+    name_phone = []
+
+    while True:
+        name = input("Name: ")
+        if name:
+            phone = input("Phone number: ")
+            if phone:
+                name_phone.append(name)
+                name_phone.append(phone)
+                break
+        print("Name or Phone number not valid.")
+
+    return tuple(name_phone)
+
+
+def ask_name():
+    name = None
+    while True:
+        input_name = input("Name: ")
+        if input_name:
+            name = input_name
+            break
+        print("Name is not valid.")
+    return name
+
+
+def print_contact_infos(contact: dict[str, str] | None) -> None:
+    if not contact:
+        print("Contact not found.")
+        return
+    print("Found Contact: ")
+    for key, value in contact.items():
+        print(f"{key}: {value}")
+
+
+def main() -> None:
+    books: list[dict[str, str]] = []
+
+    while True:
+        command = int(input("Command(1 search, 2 add, 3 quit): ").strip())
+
+        if command == 3:
+            print("quitting...")
+            break
+
+        if command == 1:
+            name = ask_name()
+            found_contact = search(name, books)
+            print_contact_infos(found_contact)
+        elif command == 2:
+            name, phone = ask_name_phone()
+            books = add(name, phone, books)
+            print(f"(Contact: {name}, {phone}) has been added!")
+
+main()
