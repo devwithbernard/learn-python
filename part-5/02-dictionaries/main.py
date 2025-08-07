@@ -82,7 +82,31 @@ def counts(words: list[str]) -> dict[str, int]:
 
     return word_counts
 
+
 fruit_counts: dict[str, int] = counts(fruits)
 
 for fruit, number in fruit_counts.items():
     print(f"{fruit} => {number} items.")
+
+
+# Categorize word base of first initial
+def categorize_initial(words: list[str]) -> dict[str, list[str]]:
+    groups: dict[str, list[str]] = {}
+
+    for word in words:
+        initial = word[0].upper()
+
+        if initial not in groups:
+            groups[initial] = []
+
+        groups[initial].append(word)
+
+    return groups
+
+
+categories: dict[str, list[str]] = categorize_initial(fruits)
+
+for category, fruits in categories.items():
+    print(f"{category}: ")
+    for index, fruit in enumerate(fruits):
+        print(f" {index + 1}. {fruit}")
