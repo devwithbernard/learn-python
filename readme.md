@@ -166,3 +166,14 @@
 > - You will be familiar with the tuple data type
 > - You will be able to create tuples from various types of values
 > - You will be able to name some typical use cases for tuples
+
+
+# Learn Python: Part 6
+
+## 1- Reading files
+
+> ### Learning objectives
+>***After this section***
+> - You will know how to read the contents of files with Python
+> - You will know what a text file and a CSV file are
+> - You will be able to process the contents of a CSV file in your programs
