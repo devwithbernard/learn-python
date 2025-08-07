@@ -40,3 +40,20 @@ people = [p1, p2, p3, p4]
 older = oldest_person(people)
 
 print(f"The oldest person is {older[0]}.")
+
+
+# TODO: Older people
+
+def older_people(people: list[tuple[str, int]], year: int) -> list[str]:
+    names: list[str] = []
+
+    for person in people:
+        if person[1] < year:
+            names.append(person[0])
+
+    return names
+
+names = older_people(people, 1979)
+print("Older persons: ")
+for name in names:
+    print(name)
