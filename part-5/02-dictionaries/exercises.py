@@ -162,3 +162,19 @@ def main() -> None:
             print(f"(Contact: {name}, {phone}) has been added!")
 
 main()
+
+
+# TODO: Invert a dictionary
+
+def invert(dictionary: dict) -> dict:
+    new_dict: dict = {}
+
+    for key, value in dictionary.items():
+        new_dict[value] = key
+
+    return new_dict
+
+
+s = {1: "first", 2: "second", 3: "third", 4: "fourth"}
+invert(s)
+print(s)
