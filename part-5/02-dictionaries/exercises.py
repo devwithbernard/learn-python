@@ -161,6 +161,7 @@ def main() -> None:
             books = add(name, phone, books)
             print(f"(Contact: {name}, {phone}) has been added!")
 
+
 main()
 
 
@@ -178,3 +179,42 @@ def invert(dictionary: dict) -> dict:
 s = {1: "first", 2: "second", 3: "third", 4: "fourth"}
 invert(s)
 print(s)
+
+
+# TODO: Movie Database
+
+def add_movie(database: list, name: str, director: str, year: int, runtime: int) -> list:
+    if name and director and year and runtime:
+        movie = {
+            'name': name,
+            'director': director,
+            'year': year,
+            'runtime': runtime
+        }
+        database.append(movie)
+    return database
+
+
+def find_movies(database: list, search_term: str) -> list | None:
+    if not database:
+        print("Empty database.")
+        return None
+
+    found_movies = []
+
+    for movie in database:
+        if search_term.lower() in movie['name'].lower():
+            found_movies.append(movie)
+
+    return found_movies
+
+
+database = []
+
+database = add_movie(database, "Gone with the Python", "Victor Pything", 2017, 116)
+database = add_movie(database, "Pythons on a Plane", "Renny Pytholin", 2001, 94)
+
+found_movies = find_movies(database, 'Python')
+
+if found_movies:
+    print(found_movies)
