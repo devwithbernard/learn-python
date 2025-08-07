@@ -115,13 +115,13 @@ for category, fruits in categories.items():
 staff = {"Alan": "lecturer", "Emily": "professor", "David": "lecturer"}
 
 # Delete key:value pair using del command
-# del staff['Alan']
-# print(staff)
-#
-# key = "David"
-# if key in staff:
-#     del staff[key]
-#     print(staff)
+del staff['Alan']
+print(staff)
+
+key = "David"
+if key in staff:
+    del staff[key]
+    print(staff)
 
 # Delete key: value pair using pop met
 deleted = staff.pop("Emily", None)
