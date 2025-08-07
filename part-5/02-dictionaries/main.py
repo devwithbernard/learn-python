@@ -110,3 +110,15 @@ for category, fruits in categories.items():
     print(f"{category}: ")
     for index, fruit in enumerate(fruits):
         print(f" {index + 1}. {fruit}")
+
+# Removing keys and values from a dictionary
+staff = {"Alan": "lecturer", "Emily": "professor", "David": "lecturer"}
+
+# Delete key:value pair using del command
+del staff['Alan']
+print(staff)
+
+key = "David"
+if key in staff:
+    del staff[key]
+    print(staff)
