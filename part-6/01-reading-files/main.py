@@ -101,7 +101,6 @@ def reading_file_right_way(file) -> list[dict]:
     return persons
 
 
-
 def find_oldest_person(persons: list[dict]) -> dict:
     oldest_person = persons[0]
 
@@ -117,3 +116,27 @@ oldest_person = find_oldest_person(persons)
 
 print(oldest_person)
 
+
+# More CSV processing
+
+def grade_processing(file):
+    grades = {}
+
+    with open(file) as f:
+        for line in f:
+            line = line.replace("\n", "").split(";")
+
+            name = line[0]
+            std_grades = [int(grade) for grade in line[1:]]
+
+            grades[name] = std_grades
+
+    return grades
+
+grades = grade_processing("files/grades.csv")
+
+for name, grade_list in grades.items():
+    best = max(grade_list)
+    average = sum(grade_list) / len(grade_list)
+
+    print(f"{name}: best grade {best}, average {average:.2f}")
