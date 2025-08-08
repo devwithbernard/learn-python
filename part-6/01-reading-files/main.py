@@ -17,6 +17,7 @@ with open("files/example.txt") as f:
         count_line += 1
         print(f"Line {count_line}:", line.replace("\n", ""))
 
+
 # Reading CSV files
 def format(titles: tuple[str, ...], parts: list[str]) -> dict[str, str]:
     new_dict = {}
@@ -45,10 +46,9 @@ def mean_salaries(salaries: list[float]) -> int:
 titles: tuple[str, ...] = tuple()
 employees: list[dict] = []
 
-
 with open("files/ds_salaries.csv") as file:
     first_line = file.readline()
-    titles = tuple(first_line.replace("\n","").split(","))
+    titles = tuple(first_line.replace("\n", "").split(","))
 
     for line in file:
         line = line.replace("\n", "")
@@ -69,6 +69,7 @@ def get_employees_per_job(employees: list[dict]) -> dict[str, list[dict]]:
 
     return category
 
+
 # Get mean salary
 mean_salary = mean_salaries(get_salaries(employees))
 
@@ -84,3 +85,35 @@ employees_per_job = get_employees_per_job(employees)
 
 for emp, values in employees_per_job.items():
     print(f"{emp.title()} -> {len(values)} employee{'s' if len(values) > 1 else ''}")
+
+
+# Reading file the right way
+
+def reading_file_right_way(file) -> list[dict]:
+    persons = []
+
+    with open(file) as f:
+        for line in f:
+            line = line.replace("\n", "").split(";")
+            person = {"name": line[0], "age": int(line[1]), "town": line[2]}
+            persons.append(person)
+
+    return persons
+
+
+
+def find_oldest_person(persons: list[dict]) -> dict:
+    oldest_person = persons[0]
+
+    for person in persons[1:]:
+        if person['age'] > oldest_person['age']:
+            oldest_person = person
+
+    return oldest_person
+
+
+persons = reading_file_right_way("files/people.csv")
+oldest_person = find_oldest_person(persons)
+
+print(oldest_person)
+
