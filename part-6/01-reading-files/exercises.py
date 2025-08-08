@@ -39,3 +39,33 @@ def read_fruits(file):
     return contents
 
 print(read_fruits("files/fruits.csv"))
+
+# TODO: Matrix items
+
+def matrix(file) -> list[list[int]]:
+    matrix: list[list[int]] = []
+
+    with open(file) as f:
+        for line in f:
+            line = line.replace("\n","").strip()
+            row = [int(i) for i in line.split(",")]
+            matrix.append(row)
+
+    return matrix
+
+def row_sums(m: list[list[int]]) -> list[int]:
+    sums: list[int] = []
+
+    for row in m:
+        sums.append(sum(row))
+
+    return sums
+
+def max_matrix(m: list[list[int]]) -> int:
+    max_list = [max(row) for row in m]
+    return max(max_list)
+
+m = matrix("files/matrix.txt")
+
+print("Sum of row items:", row_sums(m))
+print("Max of matrix items:", max_matrix(m))
