@@ -140,3 +140,35 @@ for name, grade_list in grades.items():
     average = sum(grade_list) / len(grade_list)
 
     print(f"{name}: best grade {best}, average {average:.2f}")
+
+# Combining data from different files
+
+def get_data(file: str, param=None) -> dict:
+    data: dict = {}
+
+    with open(file) as f:
+        for line in f:
+            line = line.strip().replace("\n", "")
+            parts = line.split(";")
+
+            if parts[0] == "pic":
+                continue
+
+            if param == "salaries":
+                data[parts[0]] = int(parts[1])
+            else:
+                data[parts[0]] = parts[1]
+
+    return data
+
+names = get_data("files/employees/employees.csv")
+salaries = get_data("files/employees/employee_salaries.csv", param="salaries")
+
+print()
+print("Incomes: ")
+for pic, name in names.items():
+    if pic in salaries:
+        salary = salaries[pic]
+        print(f"{name:16}  {salary} euros")
+    else:
+        print(f"{name:16}  0 euros")
