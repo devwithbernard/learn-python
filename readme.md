@@ -177,3 +177,12 @@
 > - You will know how to read the contents of files with Python
 > - You will know what a text file and a CSV file are
 > - You will be able to process the contents of a CSV file in your programs
+
+
+## 2- Writing files
+
+> ### Learning objectives
+>***After this section***
+> - You will know how to create files with Python code
+> - You will be able to write text based data to a file
+> - You will know how to create a CSV file
