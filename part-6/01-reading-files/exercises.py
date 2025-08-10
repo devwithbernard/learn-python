@@ -1,6 +1,7 @@
 """
 Reading files exercises
 """
+from multiprocessing.pool import job_counter
 
 
 # TODO: Largest number
@@ -75,6 +76,7 @@ m = matrix("files/matrix.txt")
 print("Sum of row items:", row_sums(m))
 print("Max of matrix items:", max_matrix(m))
 
+
 # TODO: Course grading
 
 def get_names(file):
@@ -82,7 +84,7 @@ def get_names(file):
 
     with open(file) as f:
         for line in f:
-            line = line.strip().replace("\n","")
+            line = line.strip().replace("\n", "")
             parts = line.split(";")
 
             if parts[0] == "id":
@@ -98,7 +100,7 @@ def get_exercise_pts(file):
 
     with open(file) as f:
         for line in f:
-            line = line.strip().replace("\n","")
+            line = line.strip().replace("\n", "")
             parts = line.split(";")
 
             if parts[0] == "id":
@@ -110,10 +112,11 @@ def get_exercise_pts(file):
 
     return points
 
+
 def get_grade(note: int) -> int:
     if note:
         match note:
-            case note if 0<= note <= 14:
+            case note if 0 <= note <= 14:
                 return 0
             case note if note <= 17:
                 return 1
@@ -130,7 +133,71 @@ def get_grade(note: int) -> int:
     else:
         raise ValueError("Note is not correct.")
 
+
 names = get_names("files/courses/students.csv")
 points = get_exercise_pts("files/courses/exercises.csv")
 exams = get_exercise_pts("files/courses/exams.csv")
 grades = {pk: get_grade(note) for pk, note in exams.items()}
+
+
+# Recipe search
+def get_recipes(filename: str) -> dict:
+    recipes = []
+
+    with open(filename) as f:
+        recipe_items: list[str] = []
+
+        for line in f:
+            line = line.replace("\n", "").strip()
+
+            if line == "":
+                if recipe_items:
+                    recipes.append(recipe_items)
+                recipe_items = []
+                continue
+
+            recipe_items.append(line)
+
+        if recipe_items:
+            recipes.append(recipe_items)
+
+    recipes_dict = {}
+
+    for recipe in recipes:
+        recipes_dict[recipe[0].lower()] = {
+            "cooking_time": int(recipe[1]),
+            "ingredients": recipe[2:]
+        }
+
+    return recipes_dict
+
+
+def search_recipe(filename: str, recipe_name):
+    recipes = get_recipes(filename)
+
+    found_recipes = []
+
+    for recipe in recipes.keys():
+        if recipe_name.lower() in recipe.lower():
+            found_recipes.append(recipe.title())
+
+    return ", ".join(found_recipes)
+
+
+def search_by_time(filename: str, prep_time: int) -> list[str]:
+    recipes = get_recipes(filename)
+    found_recipes = []
+
+    for recipe, values in recipes.items():
+        cooking_time = values['cooking_time']
+        if cooking_time <= prep_time:
+            found_recipes.append(f"{recipe}, preparation time {cooking_time} min{'s' if cooking_time > 1 else ''}")
+
+
+    return found_recipes
+
+
+found_recipes = search_by_time("files/recipes.csv", 40)
+
+for recipe in found_recipes:
+    print(recipe)
