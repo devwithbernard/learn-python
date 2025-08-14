@@ -2,3 +2,4 @@ Name: John
 Name: Emma
 Name: Jane
 Name: Luigi
+Name: Bernard
