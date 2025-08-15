@@ -43,6 +43,11 @@ def write_csv_file(filename: str, data: list[dict], delimiter=None) -> None:
     print("Data saved successfully!")
 
 
+def clear_file_contents(filename: str) -> None:
+    with open(filename, mode="w") as file:
+        pass
+
+
 def main() -> None:
     # Create a new file
     create_new_file("files/new_file.txt")
@@ -69,6 +74,8 @@ def main() -> None:
 
     write_csv_file("files/coders.csv", coders, delimiter=";")
 
+    # Clear file contents
+    clear_file_contents("files/hello-world.txt")
 
 
 if __name__ == '__main__':
