@@ -186,3 +186,13 @@
 > - You will know how to create files with Python code
 > - You will be able to write text based data to a file
 > - You will know how to create a CSV file
+
+
+## 3- Handling errors
+
+> ### Learning objectives
+>***After this section***
+> - You will know how to handle invalid input
+> - You will understand what are exceptions in programming
+> - You will be familiar with the most common exception types in python
+> - You will be able to handle your own exceptions
