@@ -224,3 +224,12 @@
 > - You will know how to handle dates and times in Python code
 > - You will be able to create and use <mark>datetime</mark> objects
 > - You will know how to compare and calculate differences between two dates or times
+
+
+## 2- Times and dates
+
+> ### Learning objectives
+>***After this section***
+> - You will know how to use a module to process CSV files
+> - You will be able to use a module to process JSON files
+> - You will be able to retrieve and read files from the internet
