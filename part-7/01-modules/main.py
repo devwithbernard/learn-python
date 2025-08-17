@@ -23,3 +23,11 @@ base = int(input("Base of triangle: "))
 side = int(input("Side of triangle: "))
 
 print(f"The hypotenuse of triangle: {hypotenuse(base, side)}")
+
+# The contents of a module
+import random
+
+functions = dir(random)
+
+for f in functions:
+    print(f)
