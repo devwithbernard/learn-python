@@ -42,3 +42,21 @@ def lottery_numbers(amount: int, lower: int, upper: int) -> list[int]:
 
 for number in lottery_numbers(7, 1, 40):
     print(number)
+
+# TODO: Password generator
+import string
+
+def generate_strong_password(length: int, number_char: bool, special_char: bool) -> str:
+    my_string = string.ascii_lowercase
+
+    if number_char:
+        my_string += string.digits
+    if special_char:
+        my_string += string.punctuation
+
+    letters = list(my_string)
+    random.shuffle(letters)
+    return "".join(letters[:length])
+
+
+print(generate_strong_password(8, False, True))
