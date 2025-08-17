@@ -38,3 +38,21 @@ def read_small_number():
 
 number = read_small_number()
 print(number, "to the power of three is", number ** 3)
+
+
+# Raising exceptions
+
+def factorial(n: int) -> int:
+    if n < 0:
+        raise ValueError(f"The input was negative: {n}")
+
+    k: int = 1
+    for i in range(2, n + 1):
+        k *= i
+
+    return k
+
+
+print(factorial(3))
+print(factorial(6))
+print(factorial(-1))
