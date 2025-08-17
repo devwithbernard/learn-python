@@ -36,3 +36,7 @@ week_from_midsummer = midsummer + timedelta(days=7)
 print("Week after mid summer:", week_from_midsummer)
 
 print("32 weeks and 15 days after mid summer will be:", midsummer + timedelta(weeks=32, days=15))
+
+# Formatting times and dates
+print("Today: ", my_time.strftime("%d/%m/%Y"))
+print("Formatting Date:", my_time.strftime("%d/%m/%Y %H:%M:%S"))
