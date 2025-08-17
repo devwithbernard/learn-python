@@ -196,3 +196,14 @@
 > - You will understand what are exceptions in programming
 > - You will be familiar with the most common exception types in python
 > - You will be able to handle your own exceptions
+
+
+# Learn Python: Part 7
+
+## 1- Modules
+
+> ### Learning objectives
+>***After this section***
+> - You will know what a Python module is
+> - You will be able to include a module in your program withe <mark><i>import</i></mark> statement
+> - You will know how to look for more information on the contents of modules
