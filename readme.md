@@ -207,3 +207,11 @@
 > - You will know what a Python module is
 > - You will be able to include a module in your program withe <mark><i>import</i></mark> statement
 > - You will know how to look for more information on the contents of modules
+
+
+## 2- Randomness
+
+> ### Learning objectives
+>***After this section***
+> - You will be familiar with some of the functions in the module <mark>random</mark>
+> - You will be able to make use of random numbers in your programs
