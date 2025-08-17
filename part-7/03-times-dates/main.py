@@ -1,4 +1,4 @@
-from datetime import datetime, time
+from datetime import datetime, time, timedelta
 
 # The datetime object
 
@@ -26,3 +26,13 @@ elif time_now == midsummer:
     print("Happy Midsummer")
 elif time_now > midsummer:
     print("It is past Midsummer")
+
+# Difference between times
+difference_date = time_now - midsummer
+print(f"The difference is {difference_date}")
+
+week_from_midsummer = midsummer + timedelta(days=7)
+
+print("Week after mid summer:", week_from_midsummer)
+
+print("32 weeks and 15 days after mid summer will be:", midsummer + timedelta(weeks=32, days=15))
