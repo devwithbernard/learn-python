@@ -41,3 +41,34 @@ separate_chars = separate_characters("Olé!!! Hey, are ümläüts wörking?")
 
 for item in separate_chars:
     print(item)
+
+
+# TODO: Fractions
+
+import fractions
+
+
+def fractionate(amount: int) -> list[fractions.Fraction]:
+    """
+    Returns a list of fractions, each equal to 1/amount.
+
+    Args:
+        amount (int): Number of fractions to return.
+
+    Returns:
+        list[fractions.Fraction]: A list containing `amount` fractions of size 1/amount.
+
+    Raises:
+        ValueError: If amount <= 0.
+    """
+
+    if amount <= 0:
+        raise ValueError("The amount parameter must be greater than 1")
+
+    return [fractions.Fraction(1, amount)] * amount
+
+
+fractionate_numbers = fractionate(5)
+
+for number in fractionate_numbers:
+    print(number)
