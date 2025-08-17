@@ -215,3 +215,12 @@
 >***After this section***
 > - You will be familiar with some of the functions in the module <mark>random</mark>
 > - You will be able to make use of random numbers in your programs
+
+
+## 2- Times and dates
+
+> ### Learning objectives
+>***After this section***
+> - You will know how to handle dates and times in Python code
+> - You will be able to create and use <mark>datetime</mark> objects
+> - You will know how to compare and calculate differences between two dates or times
