@@ -69,3 +69,18 @@ categories = categorize("Discipline", salaries)
 
 for category, values in categories.items():
     print(category, len(values))
+
+# Reading JSON files
+import json
+
+def load_json(filename: str):
+    with open(filename) as file:
+        data = file.read()
+
+    courses = json.loads(data)
+    return courses
+
+courses = load_json("files/courses.json")
+
+for course in courses:
+    print(f"{course['abbreviation']} => {course['name']}")
