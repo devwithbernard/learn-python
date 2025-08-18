@@ -84,3 +84,16 @@ courses = load_json("files/courses.json")
 
 for course in courses:
     print(f"{course['abbreviation']} => {course['name']}")
+
+
+# Retrieving a file from the internet
+import urllib.request
+
+
+def get_data(url: str):
+    with urllib.request.urlopen(url) as request:
+        data = json.loads(request.read())
+        print(data)
+
+
+get_data("https://jsonplaceholder.typicode.com/users")
