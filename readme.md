@@ -245,3 +245,13 @@
 > - You will know what an object is in programming
 > - You will understand what is meant by the independence of individual objects
 > - You will be able to create and access objects
+
+# 2- Defining classes
+
+> ### Learning objectives
+>***After this section***
+> - You will know how to define your own classes
+> - You will be able to create objects based on classes you've defined yourself
+> - You will know how to write a constructor
+> - You are familiar with the parameter name <mark><i>self</i></mark>
+> - You will know what attributes are and how they are used
