@@ -233,3 +233,15 @@
 > - You will know how to use a module to process CSV files
 > - You will be able to use a module to process JSON files
 > - You will be able to retrieve and read files from the internet
+
+
+
+# Learn Python: Part 8
+
+## 1- Objects and methods
+
+> ### Learning objectives
+>***After this section***
+> - You will know what an object is in programming
+> - You will understand what is meant by the independence of individual objects
+> - You will be able to create and access objects
