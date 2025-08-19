@@ -1,0 +1,142 @@
+[
+    {
+        "Apt. 556": {
+            "street": "Kulas Light",
+            "city": "Gwenborough",
+            "zipcode": [
+                "92998-3874"
+            ],
+            "geo": {
+                "lat": -37.3159,
+                "lng": 81.1496
+            },
+            "user_id": 1
+        }
+    },
+    {
+        "Suite 879": {
+            "street": "Victor Plains",
+            "city": "Wisokyburgh",
+            "zipcode": [
+                "90566-7771"
+            ],
+            "geo": {
+                "lat": -43.9509,
+                "lng": -34.4618
+            },
+            "user_id": 2
+        }
+    },
+    {
+        "Suite 847": {
+            "street": "Douglas Extension",
+            "city": "McKenziehaven",
+            "zipcode": [
+                "59590-4157"
+            ],
+            "geo": {
+                "lat": -68.6102,
+                "lng": -47.0653
+            },
+            "user_id": 3
+        }
+    },
+    {
+        "Apt. 692": {
+            "street": "Hoeger Mall",
+            "city": "South Elvis",
+            "zipcode": [
+                "53919-4257"
+            ],
+            "geo": {
+                "lat": 29.4572,
+                "lng": -164.299
+            },
+            "user_id": 4
+        }
+    },
+    {
+        "Suite 351": {
+            "street": "Skiles Walks",
+            "city": "Roscoeview",
+            "zipcode": [
+                "33263"
+            ],
+            "geo": {
+                "lat": -31.8129,
+                "lng": 62.5342
+            },
+            "user_id": 5
+        }
+    },
+    {
+        "Apt. 950": {
+            "street": "Norberto Crossing",
+            "city": "South Christy",
+            "zipcode": [
+                "23505-1337"
+            ],
+            "geo": {
+                "lat": -71.4197,
+                "lng": 71.7478
+            },
+            "user_id": 6
+        }
+    },
+    {
+        "Suite 280": {
+            "street": "Rex Trail",
+            "city": "Howemouth",
+            "zipcode": [
+                "58804-1099"
+            ],
+            "geo": {
+                "lat": 24.8918,
+                "lng": 21.8984
+            },
+            "user_id": 7
+        }
+    },
+    {
+        "Suite 729": {
+            "street": "Ellsworth Summit",
+            "city": "Aliyaview",
+            "zipcode": [
+                "45169"
+            ],
+            "geo": {
+                "lat": -14.399,
+                "lng": -120.7677
+            },
+            "user_id": 8
+        }
+    },
+    {
+        "Suite 449": {
+            "street": "Dayna Park",
+            "city": "Bartholomebury",
+            "zipcode": [
+                "76495-3109"
+            ],
+            "geo": {
+                "lat": 24.6463,
+                "lng": -168.8889
+            },
+            "user_id": 9
+        }
+    },
+    {
+        "Suite 198": {
+            "street": "Kattie Turnpike",
+            "city": "Lebsackbury",
+            "zipcode": [
+                "31428-2261"
+            ],
+            "geo": {
+                "lat": -38.2386,
+                "lng": 57.2232
+            },
+            "user_id": 10
+        }
+    }
+]
