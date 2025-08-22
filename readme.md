@@ -255,3 +255,11 @@
 > - You will know how to write a constructor
 > - You are familiar with the parameter name <mark><i>self</i></mark>
 > - You will know what attributes are and how they are used
+
+# 3- Defining methods
+
+> ### Learning objectives
+>***After this section***
+> - You will know how class methods work
+> - You will be able to write new methods in your own classes
+> - You will understand the concepts of encapsulation and client in object oriented programming
