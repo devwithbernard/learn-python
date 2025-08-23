@@ -263,3 +263,10 @@
 > - You will know how class methods work
 > - You will be able to write new methods in your own classes
 > - You will understand the concepts of encapsulation and client in object oriented programming
+
+# 4- More examples of classes
+
+> ### Learning objectives
+>***After this section***
+> - You will be able to create more versatile classes
+> - You will know how to add a <mark>__str__</mark> method of your class definitions
