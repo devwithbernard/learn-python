@@ -270,3 +270,14 @@
 >***After this section***
 > - You will be able to create more versatile classes
 > - You will know how to add a <mark>__str__</mark> method of your class definitions
+
+
+
+# Learn Python: Part 9
+
+## 1- Objects and references
+
+> ### Learning objectives
+>***After this section***
+> - You will be able to use different data structures for handling objects
+> - You will know how objects can be passed as arguments
