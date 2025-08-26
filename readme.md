@@ -281,3 +281,10 @@
 >***After this section***
 > - You will be able to use different data structures for handling objects
 > - You will know how objects can be passed as arguments
+
+## 2- Objects as attributes
+
+> ### Learning objectives
+>***After this section***
+> - You will know how to use objects as attributes in other objects
+> - You will be familiar with the keyword <mark>None</mark>
