@@ -1,7 +1,8 @@
 from compledtecourse import CompletedCourse
 from student import Student
 from course import Course
-
+from player import Player
+from team import Team
 
 def main() -> None:
     # List of students
@@ -19,6 +20,13 @@ def main() -> None:
     # Print out the name of the student for each completed course
     for course in completed:
         print(course.student.name)
+
+    # A list of objects as an attribute of an object
+    ca = Team("Campus Allstars")
+    ca.add_player(Player("Eric", 10))
+    ca.add_player(Player("Emily", 22))
+    ca.add_player(Player("Andy", 1))
+    ca.summary()
 
 
 if __name__ == '__main__':
