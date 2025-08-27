@@ -2,6 +2,9 @@
 Objects as attributes: Exercises
 """
 
+from present import Present
+from box import Box
+
 
 # TODO: Pets
 
@@ -24,3 +27,17 @@ hulda = Pet("Hulda", "mixed-breed dog")
 levi = Person("Levi", hulda)
 
 print(levi)
+
+# TODO: A box of presents
+book = Present("ABC Book", 2)
+cd = Present("Pink Floyd: Dark Side of the Moon", 1)
+
+box = Box()
+
+box.add_present(book)
+box.add_present(cd)
+
+print("The name of the present:", book.name)
+print("The weight of the present:", book.weight)
+print("Present:", book)
+print(f"Box weight: {box.total_weight()}kg")
