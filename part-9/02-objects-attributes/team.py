@@ -8,6 +8,13 @@ class Team:
     def add_player(self, player: Player) -> None:
         self.players.append(player)
 
+    def find_player(self, name: str) -> Player | None:
+        for player in self.players:
+            if player.name.lower() == name.lower():
+                return player
+
+        return None
+
     def summary(self) -> None:
         goals: list[int] = []
 

@@ -28,6 +28,20 @@ def main() -> None:
     ca.add_player(Player("Andy", 1))
     ca.summary()
 
+    # None: a reference to nothing
+    print(ca.find_player("Andy"))
+
+    print(ca.find_player("Mark"))
+
+    ca = Team("Campus UIA")
+    ca.add_player(Player("Eric", 10))
+
+    player = ca.find_player("Charlie")
+    if player is not None:
+        print(F"Goals by charlie: {player.goals}")
+    else:
+        print("Charlies doesn't play in campus")
+
 
 if __name__ == '__main__':
     main()
