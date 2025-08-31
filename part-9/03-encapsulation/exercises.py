@@ -41,3 +41,30 @@ print(car)
 car.fill_up()
 car.fill_up()
 print(car)
+
+
+# TODO: Recording
+
+class Recording:
+    def __init__(self, length: int) -> None:
+        if length >= 0:
+            self.__length = length
+        else:
+            raise ValueError('The length must not be below zero')
+
+    @property
+    def length(self) -> int:
+        return self.__length
+
+    @length.setter
+    def length(self, length: int) -> None:
+        if length >= 0:
+            self.__length = length
+        else:
+            raise ValueError('The length must not be below zero')
+
+
+the_wall = Recording(43)
+print(the_wall.length)
+the_wall.length = 44
+print(the_wall.length)
