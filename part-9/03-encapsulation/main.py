@@ -59,7 +59,7 @@ class Wallet:
         if amount > 0:
             self.__money += amount
         else:
-            raise ValueError("The amount must be below zero")
+            raise ValueError("The amount must not be below zero")
 
 
 wallet = Wallet()
