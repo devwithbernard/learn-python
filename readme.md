@@ -288,3 +288,11 @@
 >***After this section***
 > - You will know how to use objects as attributes in other objects
 > - You will be familiar with the keyword <mark>None</mark>
+
+## 3- Encapsulation
+
+> ### Learning objectives
+>***After this section***
+> - You will know what encapsulation means
+> - You will be able to create private attributes
+> - You will know how to create getters and setters for your attributes
