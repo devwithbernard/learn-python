@@ -26,7 +26,7 @@ class CreditCard:
         return self.__balance
 
 
-card = CreditCard('Bank of Africa','Konan Bernard', '182233aqsd')
+card = CreditCard('Bank of Africa', 'Konan Bernard', '182233aqsd')
 card.deposit_money(5000)
 print(card.retrieve_balance())
 card.deposit_money(100)
@@ -43,3 +43,30 @@ print('Card name:', card.name)
 print("Card's owner:", card.__owner)
 print("Card number:", card.__number)
 
+
+# Getters and Setters
+
+class Wallet:
+    def __init__(self) -> None:
+        self.__money = 0
+
+    @property
+    def money(self) -> float:
+        return self.__money
+
+    @money.setter
+    def money(self, amount: float) -> None:
+        if amount > 0:
+            self.__money += amount
+        else:
+            raise ValueError("The amount must be below zero")
+
+
+wallet = Wallet()
+print("Initial money:", wallet.money)
+
+wallet.money = 50
+print("Money after setting a new positive amount:", wallet.money)
+
+wallet.money = -30
+print('Money after setting a negative amount:',wallet.money)
