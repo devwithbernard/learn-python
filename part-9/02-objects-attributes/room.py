@@ -7,7 +7,8 @@ class Person:
         return f"{self.name} ({self.height} cm)"
 
 class Room:
-    persons: list[Person] = []
+    def __init__(self):
+        self.persons: list[Person] = []
 
     def add(self, person: Person):
         self.persons.append(person)
