@@ -2,7 +2,7 @@
 Class attributes
 """
 
-# Class variables
+# Class variables: Example 1
 class SavingsAccount:
     general_rate = 0.03
 
