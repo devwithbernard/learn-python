@@ -47,3 +47,60 @@ SavingsAccount.general_rate = 0.10
 print("General interest rate:", SavingsAccount.general_rate)
 print(account1.total_interest)
 print(account2.total_interest)
+
+# Class variables: Example 2
+class PhoneNumber:
+    country_codes = {"Finland": "+358", "Sweden": "+46", "United States": "+1", 'Ivory Coast': '+225'}
+
+    def __init__(self, name: str, phone_number: str, country: str) -> None:
+        self.__name = name
+        self.__country = country
+        self.__phone_number = phone_number
+
+    @property
+    def phone_number(self) -> str:
+        # the initial zero is removed as the country code is prefixed
+        return PhoneNumber.country_codes[self.__country] + " " + self.__phone_number[1:]
+
+    @phone_number.setter
+    def phone_number(self, number: str) -> None:
+        for character in number:
+            if character not in "1234567890 ":
+                raise ValueError("A phone number can only contain numbers and spaces")
+
+        self.__phone_number = number
+
+    @property
+    def local_number(self) -> str:
+        return self.__phone_number
+
+    @property
+    def country(self) -> str:
+         return self.__country
+
+    @country.setter
+    def country(self, country: str) -> None:
+        if country not in PhoneNumber.country_codes:
+            raise ValueError('This country is not on the list.')
+
+        self.__country = country
+
+    @property
+    def name(self) -> str:
+        return self.__name
+
+    @name.setter
+    def name(self, name: str) -> None:
+        if not name:
+            raise ValueError('Name must not be empty')
+
+        self.__name = name
+
+    def __str__(self) -> str:
+        return f"{self.phone_number} ({self.name})"
+
+
+pn = PhoneNumber("Peter Pythons", "040 111 1111", "Sweden")
+print(pn)
+print(pn.phone_number)
+print(pn.local_number)
