@@ -296,3 +296,11 @@
 > - You will know what encapsulation means
 > - You will be able to create private attributes
 > - You will know how to create getters and setters for your attributes
+
+## 3- Class attributes
+
+> ### Learning objectives
+>***After this section***
+> - You will be familiar with the terms class variable and class method
+> - You will know how static traits are different from the traits of instances
+> - You will be able to add static traits to your own classes
