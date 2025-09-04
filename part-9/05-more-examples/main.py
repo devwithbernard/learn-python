@@ -79,3 +79,100 @@ line = Line(point, mirrored_point)
 print("Length of line:", line.length())
 print("Centre of line:", line.centre())
 print("Line:", line)
+
+# Second use case: Default values of parameters
+
+class Student:
+
+    def __init__(self, name: str, student_number: str, credits: int = 0, notes: str = "", completed_courses = None) -> \
+            None:
+        self.name = name
+
+        if len(student_number) < 5:
+            raise ValueError('A student number should have at least five characters')
+
+
+        self.__student_number = student_number
+        self.credits = credits
+        self.__notes = notes
+        self.completed_courses = completed_courses
+
+    @property
+    def name(self) -> str:
+        return self.__name
+
+    @name.setter
+    def name(self, name: str) -> None:
+        if name != "":
+            self.__name = name
+        else:
+            raise ValueError("The name cannot be an empty string")
+
+    @property
+    def student_number(self) -> str:
+        return self.__student_number
+
+    @property
+    def credits(self) -> int:
+        return self.__credits
+
+    @credits.setter
+    def credits(self, op: int) -> None:
+        if op >= 0:
+            self.__credits = op
+        else:
+            raise ValueError('The number of study credits cannot be below zero')
+
+    @property
+    def notes(self) -> str:
+        return self.__notes
+
+    @notes.setter
+    def notes(self, notes: str) -> None:
+        self.__notes = notes
+
+    @property
+    def completed_courses(self) -> list | None:
+        return self.__completed_courses
+
+    @completed_courses.setter
+    def completed_courses(self, completed_courses) -> None:
+        if completed_courses is None:
+            self.__completed_courses = []
+        else:
+            self.__completed_courses = completed_courses
+
+    def add_course(self, course: str) -> None:
+        self.completed_courses.append(course)
+
+    def summary(self):
+        print(f"Student {self.__name} ({self.student_number}):")
+        print(f"- credits: {self.__credits}")
+
+        if self.notes:
+            print(f"- notes: {self.notes}")
+        else:
+            print("- notes: no notes available")
+        if self.completed_courses:
+            print(f"- completed courses: {', '.join(self.completed_courses)}")
+
+
+# Passing only the name and the student number as arguments to the constructor
+student1 = Student("Sally Student", "12345")
+student1.add_course("ACiP")
+student1.add_course("ItP")
+student1.summary()
+
+
+# Passing the name, the student number and the number of study credits
+student2 = Student("Sassy Student", "54321", 25)
+student2.summary()
+
+# Passing values for all the parameters
+student3 = Student("Saul Student", "99999", 140, "extra time in exam")
+student3.summary()
+
+# Passing a value for notes, but not for study credits
+# NB: the parameter must be named now that the arguments are not in order
+student4 = Student("Sandy Student", "98765", notes="absent in academic year 20-21")
+student4.summary()
