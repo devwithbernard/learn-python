@@ -99,3 +99,50 @@ print()
 
 print("Shelf:")
 shelf.list_books()
+
+# Inheritance and scope of traits
+
+class Product:
+    """This class models a simple product"""
+    def __init__(self, name: str, price: float):
+        self.name = name
+        self.price = price
+
+class BonusCard:
+    """This class models a bonus card and its functionalities"""
+    def __init__(self):
+        self.products_bought = []
+
+    def add_product(self, product: Product) -> None:
+        self.products_bought.append(product)
+
+    def calculate_bonus(self) -> float:
+        bonus = 0
+        for product in self.products_bought:
+            bonus += product.price * 0.05
+
+        return bonus
+
+class PlatinumCard(BonusCard):
+
+    def __init__(self):
+        super().__init__()
+
+    def calculate_bonus(self) -> float:
+        bonus = super().calculate_bonus()
+        bonus *= 1.05
+
+        return bonus
+
+card = BonusCard()
+card.add_product(Product("Bananas", 6.50))
+card.add_product(Product("Satsumas", 7.95))
+bonus = card.calculate_bonus()
+
+card2 = PlatinumCard()
+card2.add_product(Product("Bananas", 6.50))
+card2.add_product(Product("Satsumas", 7.95))
+bonus2 = card2.calculate_bonus()
+
+print(bonus)
+print(bonus2)
