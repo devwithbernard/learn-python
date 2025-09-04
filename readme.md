@@ -323,3 +323,11 @@
 > - You will know what inheritance means in a programming context
 > - You will be able to write classes which inherit other classes
 > - You will know how inheritance affects the traits in classes
+
+## 2- Developing a larger application
+
+> ### Learning objectives
+>***After this section***
+> - You will be familiar with some basic principles of application development
+> - You will be comfortable differentiating between the different parts of an application (user interface, program logic and file handling)
+> - You will have practiced writing your own somewhat larger application
