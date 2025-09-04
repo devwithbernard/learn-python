@@ -62,3 +62,34 @@ museum.add_game(ComputerGame("Bubble Bobble", "Taito", 1986))
 
 for game in museum.list_games():
     print(game)
+
+
+# TODO: Areas
+
+class Rectangle:
+    def __init__(self, width: float, height: float):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+    def __str__(self) -> str:
+        return f"Rectangle {self.width}x{self.height}"
+
+class Square(Rectangle):
+    def __init__(self, width: float):
+        super().__init__(width, width)
+        self.width = width
+
+    def __str__(self) -> str:
+        return f"Square {self.width}x{self.width}"
+
+
+rectangle = Rectangle(2, 3)
+print(rectangle)
+print("area:", rectangle.area())
+
+square = Square(4)
+print(square)
+print("area:", square.area())
