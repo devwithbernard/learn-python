@@ -304,3 +304,10 @@
 > - You will be familiar with the terms class variable and class method
 > - You will know how static traits are different from the traits of instances
 > - You will be able to add static traits to your own classes
+
+## 4- More examples with classes
+
+> ### Learning objectives
+>***After this section***
+> - You will be familiar with some more examples of classes and objects
+> - You will be able to use default values for parameters in your methods
