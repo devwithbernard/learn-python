@@ -311,3 +311,15 @@
 >***After this section***
 > - You will be familiar with some more examples of classes and objects
 > - You will be able to use default values for parameters in your methods
+
+
+
+# Learn Python: Part 10
+
+## 1- Class hierarchies
+
+> ### Learning objectives
+>***After this section***
+> - You will know what inheritance means in a programming context
+> - You will be able to write classes which inherit other classes
+> - You will know how inheritance affects the traits in classes
