@@ -331,3 +331,13 @@
 > - You will be familiar with some basic principles of application development
 > - You will be comfortable differentiating between the different parts of an application (user interface, program logic and file handling)
 > - You will have practiced writing your own somewhat larger application
+
+
+# Learn Python: Part 11
+
+## 1- List comprehensions
+
+> ### Learning objectives
+>***After this section***
+> - You will know what list comprehensions are
+> - You will be able to use list comprehensions to create new lists
