@@ -341,3 +341,11 @@
 >***After this section***
 > - You will know what list comprehensions are
 > - You will be able to use list comprehensions to create new lists
+
+## 2- More comprehensions
+
+> ### Learning objectives
+>***After this section***
+> - You will be able to use comprehensions with strings
+> - You will know how to use comprehensions with your own classes
+> - You will be able to create dictionary comprehensions
