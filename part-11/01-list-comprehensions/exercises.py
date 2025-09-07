@@ -73,3 +73,13 @@ numbers = [1,65, 32, -6, 9, 11]
 print(remove_smaller_than(numbers, 10))
 
 print(remove_smaller_than([-4, 7, 8, -100], 0))
+
+# TODO: Begin with a vowel
+
+def begin_with_vowel(words: list[str]) -> list[str]:
+    VOWELS = ('a', 'e', 'i', 'o', 'u' , 'y')
+    return [word for word in words if word.lower()[0] in VOWELS]
+
+word_list = ["automobile","motorbike","Animal","cat","Dog","APPLE","orange"]
+for vowelled in begin_with_vowel(word_list):
+    print(vowelled)
