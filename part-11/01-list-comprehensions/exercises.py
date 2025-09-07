@@ -63,3 +63,13 @@ def lengths(lists: list[list]):
 
 lists = [[1,2,3,4,5], [324, -1, 31, 7],[]]
 print(lengths(lists))
+
+# TODO: Remove smaller than
+
+def remove_smaller_than(numbers: list, limit: int):
+    return [number for number in numbers if number >= limit]
+
+numbers = [1,65, 32, -6, 9, 11]
+print(remove_smaller_than(numbers, 10))
+
+print(remove_smaller_than([-4, 7, 8, -100], 0))
