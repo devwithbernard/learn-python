@@ -55,3 +55,11 @@ result2 = ExamResult("Pippa",3,4,1)
 result3 = ExamResult("Paul",2,1,3)
 results = [result1, result2, result3]
 print(best_results(results))
+
+# TODO: Lengths
+
+def lengths(lists: list[list]):
+    return [len(item) for item in lists]
+
+lists = [[1,2,3,4,5], [324, -1, 31, 7],[]]
+print(lengths(lists))
