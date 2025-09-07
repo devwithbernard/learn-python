@@ -83,3 +83,48 @@ def begin_with_vowel(words: list[str]) -> list[str]:
 word_list = ["automobile","motorbike","Animal","cat","Dog","APPLE","orange"]
 for vowelled in begin_with_vowel(word_list):
     print(vowelled)
+
+# TODO: Lottery numbers
+
+class LotteryNumbers:
+    def __init__(self, week: int, numbers: list[int]):
+        self.week = week
+        self.numbers = numbers
+
+    @property
+    def week(self):
+        return self.__week
+
+    @week.setter
+    def week(self, week: int):
+        if week < 1:
+            raise ValueError('The week must be above 1')
+        self.__week = week
+
+    @property
+    def numbers(self):
+        return self.__numbers
+
+    @numbers.setter
+    def numbers(self, numbers):
+        if len(numbers) != 7:
+            raise ValueError("The number's list must contain exactly seven numbers")
+
+        self.__numbers = numbers
+
+    def number_of_hits(self, numbers: list[int]) -> int:
+        return len([number for number in self.numbers if number in numbers])
+
+    def hits_in_place(self, numbers: list[int]) -> list[int]:
+        return [number if number in self.numbers else - 1 for number in numbers]
+
+
+week5 = LotteryNumbers(5, [1,2,3,4,5,6,7])
+my_numbers = [1,4,7,11,13,19,24]
+
+print(week5.number_of_hits(my_numbers))
+
+week8 = LotteryNumbers(8, [1,2,3,10,20,30,33])
+my_numbers = [1,4,7,10,11,20,30]
+
+print(week8.hits_in_place(my_numbers))
