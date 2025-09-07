@@ -81,3 +81,13 @@ properties = [a1, a2, a3, a4, a5, a6]
 print(f"cheaper options when compared to {a3.description}:")
 for item in cheaper_properties(properties, a3):
     print(f"{item.description:35} price difference {item.price_per_sqm - a3.price_per_sqm} euros")
+
+# TODO: Lengths of strings
+
+def lengths(strings: list[str]) -> dict[str, int]:
+    return {string: len(string) for string in strings}
+
+word_list = ["once", "upon" , "a", "time", "in"]
+
+word_lengths = lengths(word_list)
+print(word_lengths)
