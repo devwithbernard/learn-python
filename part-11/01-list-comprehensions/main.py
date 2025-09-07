@@ -26,3 +26,13 @@ def factorials(n):
 
 factorial_numbers = [factorials(number) for number in numbers]
 print(f"Factorial {numbers}: {factorial_numbers}")
+
+# Filtering the items
+numbers = [1, 1, 2, 3, 4, 6, 4, 5, 7, 10, 12, 3]
+
+even_numbers = [number for number in numbers if number % 2 == 0]
+print("Even numbers:", even_numbers)
+
+numbers = [-2, 3, -1, 4, -10, 5, 1]
+factorial_numbers = [(number, factorials(number)) for number in numbers if number >= 0]
+print(factorial_numbers)
