@@ -91,3 +91,16 @@ word_list = ["once", "upon" , "a", "time", "in"]
 
 word_lengths = lengths(word_list)
 print(word_lengths)
+
+# TODO: Most common words
+def most_common_words(filename: str, lower_limit: int):
+    with open(filename) as f:
+        lines = [line.replace("\n","").replace(".", "").replace(',', "") for line in f]
+        split_words = " ".join(lines).lower().split(" ")
+
+        words = {word: split_words.count(word) for word in split_words if split_words.count(word) >=
+                 lower_limit}
+        return words
+
+
+print(most_common_words("text.txt", 3))
