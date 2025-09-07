@@ -102,3 +102,25 @@ shelf.add_book(b3)
 # Create a list containing the names of all books
 for book in shelf:
     print(book)
+
+
+# Comprehensions and dictionaries
+sentence = "hello there"
+
+char_counts = {character: sentence.count(character) for character in sentence}
+
+for character, char_count in char_counts.items():
+    print(f"{character}: {char_count}")
+
+
+def factorial(n: int):
+    k = 1
+    while n >= 2:
+        k *= n
+        n -= 1
+
+    return k
+
+numbers = [-2, 3, 2, 1, 4, -10, 5, 1, 6]
+factorials = {number : factorial(number) for number in numbers if number > 0}
+print(factorials)
