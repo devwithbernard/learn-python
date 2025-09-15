@@ -37,3 +37,16 @@ def fact(number: int) -> int:
 
 number = int(input("Enter a number: "))
 print(f"{number}! = {fact(number)}")
+
+# Recursion and return value
+
+def fibonacci(number: int) -> int:
+    if number < 0:
+        raise ValueError("The number must be greater than or equal to 0")
+    if number < 2:
+        return 1
+    return fibonacci(number - 1) + fibonacci(number - 2)
+
+
+for i in range(1, 7):
+    print(fibonacci(i), end=" ")
