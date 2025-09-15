@@ -349,3 +349,10 @@
 > - You will be able to use comprehensions with strings
 > - You will know how to use comprehensions with your own classes
 > - You will be able to create dictionary comprehensions
+
+## 3- Recursion
+
+> ### Learning objectives
+>***After this section***
+> - You will know what recursion means
+> - You will be able to write a simple recursive function
