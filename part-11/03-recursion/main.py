@@ -50,3 +50,35 @@ def fibonacci(number: int) -> int:
 
 for i in range(1, 7):
     print(fibonacci(i), end=" ")
+
+
+# Binary search
+
+def binary_search(my_list: list, item) -> bool:
+    if not my_list:
+        return False
+
+    sorted_list = sorted(my_list)
+
+    middle = len(sorted_list) // 2
+
+    if item == sorted_list[middle]:
+        return True
+
+    if item > sorted_list[middle]:
+        return binary_search(sorted_list[middle +1: ], item)
+
+    if item < sorted_list[middle]:
+        return binary_search(sorted_list[:middle], item)
+
+    return False
+
+
+my_list = [1, 2, 3, 4, 5, 6]
+
+print(binary_search(my_list, 1))
+print(binary_search(my_list, 2))
+print(binary_search(my_list, 5))
+print(binary_search(my_list, 0))
+print(binary_search(my_list, 10))
+print(binary_search(my_list, 3))
