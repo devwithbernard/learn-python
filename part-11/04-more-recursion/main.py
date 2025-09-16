@@ -50,6 +50,12 @@ class Node:
         else:
             return True
 
+    def greatest_node(self):
+        if self.right is None:
+            return self.value
+        else:
+            return self.right.greatest_node()
+
 
 tree = Node(10)
 tree.insert(3)
@@ -67,3 +73,5 @@ tree.insert(6)
 print(tree.find(18))
 print(tree.find(7))
 print(tree.find(6))
+
+print(tree.greatest_node())
