@@ -356,3 +356,9 @@
 >***After this section***
 > - You will know what recursion means
 > - You will be able to write a simple recursive function
+
+## 4- More Recursion
+
+> ### Learning objectives
+>***After this section***
+> - You will be familiar with binary trees and some recursive algorithms used to process them
