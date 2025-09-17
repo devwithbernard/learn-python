@@ -91,3 +91,37 @@ sort_by_length = sorted(strings, key=lambda string: len(string))
 
 for item in sort_by_length:
     print(item, 'length:', len(item))
+
+
+class Recording:
+    """ The class models a single audio recording """
+
+    def __init__(self, name: str, performer: str, year: int, runtime: int):
+        self.name = name
+        self.performer = performer
+        self.year = year
+        self.runtime = runtime
+
+    def __str__(self):
+        return f"{self.name} ({self.performer}), {self.year}. {self.runtime} min."
+
+
+def oldest_recording(recordings: list[Recording]) -> Recording:
+    return min(recordings, key=lambda recording: recording.year)
+
+
+def longest_recording(recordings: list[Recording]) -> Recording:
+    return max(recordings, key=lambda recording: recording.runtime)
+
+
+r1 = Recording("Nevermind", "Nirvana", 1991, 43)
+r2 = Recording("Let It Be", "Beatles", 1969, 35)
+r3 = Recording("Joshua Tree", "U2", 1986, 50)
+
+recordings = [r1, r2, r3]
+
+print("The oldest recording:")
+print(min(recordings, key=lambda rec: rec.year))
+
+print("The longest recording:")
+print(max(recordings, key=lambda rec: rec.runtime))
