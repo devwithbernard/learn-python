@@ -82,3 +82,12 @@ print()
 print("Sort by credits:")
 for student in sorted(students, key=sort_by_credits):
     print(student)
+
+print()
+# Lambda expressions
+strings = ["Mickey", "Mack", "Marvin", "Minnie", "Merl"]
+
+sort_by_length = sorted(strings, key=lambda string: len(string))
+
+for item in sort_by_length:
+    print(item, 'length:', len(item))
