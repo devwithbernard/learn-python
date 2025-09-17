@@ -362,3 +362,15 @@
 > ### Learning objectives
 >***After this section***
 > - You will be familiar with binary trees and some recursive algorithms used to process them
+
+
+# Learn Python: Part 12
+
+## 1- Functions as arguments
+
+> ### Learning objectives
+>***After this section***
+> - You will be able to sort lists according to different criteria
+> - You will know what a lambda expression is
+> - You will be able to use lambda expression with other Python functions
+> - You will know how a function is passed as an argument to another function
