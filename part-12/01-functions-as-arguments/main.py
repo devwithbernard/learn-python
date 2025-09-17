@@ -22,3 +22,22 @@ for product in products_order_by_price:
     print(f"{product[0]}: ${product[1]}")
 
 print()
+
+# A function definition within a function definition
+
+persons: list[tuple[str, int]] = [('Bryan', 28), ('Jane', 15), ('Merlin', 17), ('Mark', 23)]
+
+
+def sort_by_age(items: list[tuple[str, int]]) -> list[tuple[str, int]]:
+    def order_by_age(item: tuple[str, int]) -> int:
+        return item[1]
+
+    return sorted(items, key=order_by_age)
+
+
+persons_order_by_age = sort_by_age(persons)
+
+for person in persons_order_by_age:
+    print(f"{person[0]}: {person[1]} years old.")
+
+print()
