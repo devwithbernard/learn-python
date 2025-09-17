@@ -374,3 +374,12 @@
 > - You will know what a lambda expression is
 > - You will be able to use lambda expression with other Python functions
 > - You will know how a function is passed as an argument to another function
+
+## 2- Generators
+
+> ### Learning objectives
+>***After this section***
+> - You will know what a Python generator is
+> - You will be familiar with the keyword yield
+> - You will be able to write your own generator functions
+
