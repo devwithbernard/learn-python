@@ -99,3 +99,44 @@ team = [player1, player2, player3, player4, player5]
 print(most_goals(team))
 print(most_points(team))
 print(least_minutes(team))
+
+# TODO: Product search
+
+from typing import Callable
+
+
+class Product:
+    def __init__(self, name: str, price: float, amount: int):
+        self.name = name
+        self.price = price
+        self.amount = amount
+
+    def __str__(self):
+        return f"{self.name}, {self.price}, {self.amount}"
+
+
+def search(products: list[Product], criterion: Callable):
+    remaining_products = []
+
+    for product in products:
+        if criterion(product):
+            remaining_products.append(product)
+
+    return remaining_products
+
+
+def price_under_4_euros(product: Product):
+    return product.price < 4
+
+products = [
+    Product("banana", 5.95, 12),
+    Product("apple", 3.95, 3),
+    Product("orange", 4.50, 2),
+    Product("watermelon", 4.95, 22),
+    Product("kale", 0.99, 1)
+]
+
+products_under_4_euros = search(products, price_under_4_euros)
+
+for product in products_under_4_euros:
+    print(product)
